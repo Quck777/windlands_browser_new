@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 $t=time();
 $y = $player->pers['y'];
 $x = $player->pers['x'];

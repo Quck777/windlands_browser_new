@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <?
 	$params = explode("@",$_POST["params"]);
 	foreach ($params as $z)

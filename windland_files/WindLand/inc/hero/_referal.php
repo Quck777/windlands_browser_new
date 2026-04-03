@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 echo "<script>var REF_COMP = 1;</script>";
 if( isset($_GET['gopers']) and $_GET["gopers"]=='ref_competition')
 {

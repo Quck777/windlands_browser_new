@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 if (empty($pass)) exit;
 
 $_POST['db_backup'] = SQL_BASE;

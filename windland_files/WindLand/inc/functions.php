@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <?
 $sql_queries_counter=0;
 $sql_queries_timer=0;

@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <center><?
 $sps = Array("sp1","sp2","sp5","sp6","sp7","sp9","sp11","sp12","sp13");
 echo '<table border="0" width="700" cellspacing="9" cellpadding="0" class=weapons_box> <tr> <td align="center"><img src=images/locations/university.jpg width=600></td> </tr>';

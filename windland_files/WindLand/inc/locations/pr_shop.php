@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <center><font class=hp><?php
 
 //if (UID!=7) exit('Closed.');

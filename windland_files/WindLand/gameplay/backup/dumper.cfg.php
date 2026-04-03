@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 $this->SET = array(
 'last_action' => '0',
 'last_db_backup' => 'windlands_wl',

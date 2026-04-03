@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 
 	if (rand(0,50)<1) set_vars("action=-1",UID);
 	$r = intval($http->get["beginr"]);

@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <div class=fightlong>
 <?php
 if ( $player->pers["waiter"]>tme() )

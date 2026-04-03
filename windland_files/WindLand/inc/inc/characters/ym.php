@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <table border=0 width=100% bgcolor=#F5F5F5 class=LinedTable cellspacing=0>
 <tr><td colspan=6><? if (($player->pers["free_f_skills"] + $player->pers["free_p_skills"] + $player->pers["free_m_skills"])>0) echo "<center><b><a href='javascript:document.ym.submit()' class=bga>Сохранить</a></b></center>"; ?></td></tr>
 <? if ($player->pers['free_f_skills']<>0)echo '<tr bgcolor="D5D5D5"><td align="center"><i class=user>Свободные боевые</i></td><td class=babout><div id=nymen class=user></div></td></tr>';?>

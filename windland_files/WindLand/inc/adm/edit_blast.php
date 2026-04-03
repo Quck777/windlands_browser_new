@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <script language=JavaScript src='js/mod/ajax.js' type="text/javascript"></script>
 <script language=JavaScript src='js/admin_script/adm_magic.js' type="text/javascript"></script>
 <a href=main.php class=bga>Назад</a>

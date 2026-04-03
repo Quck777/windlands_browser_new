@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 	error_reporting(0);
 	include ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');
 	include (ROOT.'/inc/functions.php');

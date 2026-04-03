@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 
 function start_t1($a=20,$STEP=1,$tour=1,$quest_id=1)
 {

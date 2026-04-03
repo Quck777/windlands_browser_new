@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <table width="100%" background="/images/bg.gif" cellpadding="0" height="100%" cellspacing="0" border="0"><tr><td valign="top">
 <table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
 	<tr>

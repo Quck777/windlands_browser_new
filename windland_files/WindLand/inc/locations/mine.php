@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <SCRIPT LANGUAGE='JavaScript' SRC='/js/mine.js'></SCRIPT>
 <?php
 $MINE_ID = 32;//($player->pers["x"]*$player->pers["y"])%65500;

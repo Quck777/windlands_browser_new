@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <center>
 <?php
 	if (@$http->get["buy_alchemy"] and $http->get["buy_alchemy"]==1 and $player->pers["s5"]>14 and $player->pers["money"]>99)
