@@ -51,6 +51,7 @@ if ($umelka>2300) $umelka = 2300;
 
 ?>
 <LINK href="/css/main_v2.css" rel=STYLESHEET type=text/css>
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 <form action="?" method="GET" align="center">
 	<input type="hidden" name="do" value="1">
 	<select name="k1"><option value="0"></option><?php echo genet(1);?></select>

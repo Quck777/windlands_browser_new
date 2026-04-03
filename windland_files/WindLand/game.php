@@ -66,6 +66,7 @@ $today = getdate ();
 <META Content='text/html; charset=windows-1251' Http-Equiv=Content-type>
 
 <LINK href='css/main_v2.css' rel=STYLESHEET type=text/css>
+<LINK href='css/modern_game.css' rel=STYLESHEET type=text/css>
 </HEAD>
 <BODY scroll=no style='overflow:hidden;'>
 <SCRIPT LANGUAGE='JavaScript' SRC='js/cookie.js'></SCRIPT>

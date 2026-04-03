@@ -33,6 +33,7 @@ $db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
 	<meta name="Classification" content="On-line cb662053.tw1.ru">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="./css/index_v2.css" />
+        <link rel="stylesheet" type="text/css" href="./css/modern_game.css" />
 	<!--[if lt IE 7]>
 	<link href="./css/iepng.css" rel="stylesheet" type="text/css">
 	<![endif]-->

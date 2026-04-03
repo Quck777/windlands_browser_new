@@ -14,6 +14,7 @@ $http = new Jhttp();
 
 ?><META Content="text/html; charset=windows-1251" Http-Equiv="Content-type">
 <LINK href="/css/main_v2.css" rel="STYLESHEET" type="text/css">
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 <?php
 
 //if ( (@$_GET['p']=='Joe' or @$_GET['id']==7) and (@$_COOKIE['uid']!=7 or @$_COOKIE['nick']!='Joe') ) unset($_GET);

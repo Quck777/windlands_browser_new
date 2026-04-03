@@ -24,6 +24,7 @@ if ( !$player->pers ) exit;
 <META Http-Equiv=Pragma Content=No-Cache>
 <META Http-Equiv=Expires Content=0>
 <LINK href="/css/main_v2.css" rel=STYLESHEET type=text/css>
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 <title>Wind Land</title>
 
 <body topmargin="15" leftmargin="15" rightmargin="15" bottommargin="15" class=fightlong style="overflow:hidden;">
