@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <center>
   <img src='images/dajma.jpg' border="0" /><br />
 <input type=button onClick="location='main.php?year=1'" style='width: 150;' value="Получить Подарок" title="Чтоб получить подарок, нажмите на кнопку" class=login>

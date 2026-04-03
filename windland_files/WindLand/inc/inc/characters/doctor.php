@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <?
 echo '<form method="POST" action="main.php"><div id=doctor><input type=button value="Лечить" class=submit onclick="lecher();"></div></form>';
 if (strpos(" |".$pers["aura"],"doctor_l")>0) $l = '<option value="l">Легкая</option>';

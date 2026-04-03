@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <table border="0" width="150" cellspacing="1">
 	<tr>
 		<td><font class=stats>Сила:</font></td>

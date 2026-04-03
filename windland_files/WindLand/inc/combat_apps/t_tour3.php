@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 
 include_once (ROOT.'/inc/quest/quests.php');
 $t1 = $db->sqla("SELECT * FROM quest WHERE id = ".TOUR3."");

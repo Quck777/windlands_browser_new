@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 if ($player->pers['sign']!='watchers' and !$priv) exit('5');
 
 DEFINE ('WN_CURS', 100);

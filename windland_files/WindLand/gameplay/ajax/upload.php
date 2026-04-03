@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 
 Error_Reporting(0);
 require ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');

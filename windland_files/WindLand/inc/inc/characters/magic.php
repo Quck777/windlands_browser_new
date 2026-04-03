@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <table border="0" width="435" cellspacing="1" class=inv>
 	<tr>
 		<td width="155" class=um>Религия</td>

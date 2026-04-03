@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 
 <table cellSpacing="0" cellPadding="0" border="0" cellspacing="5" cellspadding="5" width="660"><tr><td align="middle">
 	<img title="Ножи" style="cursor: pointer" onclick="location='main.php?do=2&set_type=noji'" height="50" src="/images/weapons/set_knife.gif" width="40" border="0">

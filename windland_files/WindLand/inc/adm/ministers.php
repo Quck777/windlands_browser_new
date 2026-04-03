@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <center class="inv">
 <a class=bga href=main.php?go=administration>Назад</a>
 <?php

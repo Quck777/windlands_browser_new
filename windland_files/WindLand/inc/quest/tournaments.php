@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <?
 	$t1 = sqla("SELECT * FROM quest WHERE id = ".TOUR1."");
 	$t2 = sqla("SELECT * FROM quest WHERE id = ".TOUR2."");

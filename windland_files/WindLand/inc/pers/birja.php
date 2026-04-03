@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <?
 $lo=1;
 $couns = $db->sql('SELECT * FROM `birja` WHERE `id`>="'.$lo.'"  ORDER BY `dnv_kol` ASC LIMIT 20;');

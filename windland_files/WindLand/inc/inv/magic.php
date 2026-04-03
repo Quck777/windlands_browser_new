@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <script>
 function deletezakl (id) {
 if  (confirm ('Вы действительно хотите вычеркнуть это заклинание?')) {location='main.php?deletezakl='+id;}

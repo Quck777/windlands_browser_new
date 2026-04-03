@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <?
 echo '<table border="2" width="100%" cellspacing="0" cellpadding="0">';
 for ($i=0;$i<9;$i++)

@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <div class=return_win><input type="button" value="Назад" class="inv_but" onclick="location='main.php'" style="width:500">
 <input type="button" value="Улучшить" class="inv_but" onclick="location='main.php?c=indap'" style="width:500"></div>
 <?php

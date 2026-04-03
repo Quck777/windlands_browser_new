@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 
 include("inc/balance.php");
 echo '<script type="text/javascript" src="js/adm_bots.js?3"></script>';

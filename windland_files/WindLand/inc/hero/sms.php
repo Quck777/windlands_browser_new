@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 	// the function returns an MD5 of parameters passed
 	// функция возвращает MD5 переданных ей параметров
 	function ref_sign() 

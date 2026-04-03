@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 
 <center><?
 echo '<table border="0" width="700" cellspacing="9" cellpadding="0" > <tr> <td align="center"><img src=images/locations/university.jpg width=600></td> </tr>';

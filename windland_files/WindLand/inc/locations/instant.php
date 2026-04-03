@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 
 $do = isset($http->get['do']) ? intval($http->get['do']) : 0;
 $do = isset($http->post['do']) ? intval($http->post['do']) : $do;

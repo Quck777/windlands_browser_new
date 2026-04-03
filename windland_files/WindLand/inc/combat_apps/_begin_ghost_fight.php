@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 
 function begin_ghost_fight($uid,$namesvs,$type,$travm,$timeout,$oruj,$loc,$battle_type = 0)
 {

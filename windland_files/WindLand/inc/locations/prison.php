@@ -1,3 +1,9 @@
+<?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
 <center><font class=user></font><hr><img border="0" src="images/locations/prison.jpg"></center>
 <center>
 <font class=hp>

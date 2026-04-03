@@ -1,34 +1,37 @@
-```php
-# PHP related
-*.php~
-*.php.bak
-*.php.swp
-
-# Cache and temporary files
-*.tmp
-*.temp
-*.cache
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
 *.log
-
-# Backup files
-*~
-.bak
-.backup
-
-# IDE specific
-.vscode/
-.idea/
+*.tmp
 *.swp
-*.swo
+
+# Dependencies
+vendor/
+node_modules/
 
 # Environment
 .env
 .env.local
-.env.*
+*.env.*
 
-# Dependencies and build artifacts
-vendor/
-composer.lock
+# Editors
+.vscode/
+.idea/
+
+# Backup and dump files
+*backup*/
+*.bak
+*.orig
+*.save
+.sql_dump.php
+dumper.cfg.php
+
+# Session and cache files
+*.sess
+*.cache
 
 # OS generated files
 .DS_Store

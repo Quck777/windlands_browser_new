@@ -1,4 +1,10 @@
 <?php
+##############################
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
+##############################
+
+<?php
 	## Раз в сутки // 0	0	*	*	* root /usr/local/bin/php /home/www/gameplay/cron/online.update.php 
 	Error_Reporting(0);
 	ignore_user_abort(true);
