@@ -29,8 +29,10 @@ class MySQL
         $this->base = $this->sq['mc']( $this->host.':'.$this->port, $user, $pwd, true );
         $rs = $this->sq['msd']( $db, $this->base );
 		
-		if ( $rs==false ) die ( '<h1>Ошибочная конфигурация сервера (MySQL Off).</h1>' );
+		if ( $rs==false ) die ( '<h1>Oshibka podklyucheniya k baze dannykh (MySQL Off).</h1>' );Ошибочная конфигурация сервера (MySQL Off).</h1>' );
 		$this->sq['mq']('SET NAMES cp1251');
+t	// Ustanovka kodirovki Windows-1251 dlya globalnogo obnovleniya 2026
+		$this->sq['mq']('SET CHARACTER SET cp1251');
 	}
 	
 	private function error($q,$file='',$line='',$func='',$class='')

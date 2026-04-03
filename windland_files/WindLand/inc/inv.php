@@ -1,6 +1,7 @@
 <?php
 ##############################
-#### Mod Joe. 13.04.2013 #####
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
 ##############################
 
 ?><div id=inf_from_php style='display:none;position:absolute;top:0px;height:0;'>
