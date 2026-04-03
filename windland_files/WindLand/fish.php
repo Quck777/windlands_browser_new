@@ -92,6 +92,7 @@ function HTML_view_primanka($id)
 <META Content='text/html; charset=windows-1251' Http-Equiv=Content-type>
 
 <LINK href='/css/main_v2.css' rel=STYLESHEET type=text/css>
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 </HEAD>
 <BODY style='overflow:hidden;'>
 

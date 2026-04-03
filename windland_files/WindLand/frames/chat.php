@@ -15,6 +15,7 @@ $pers = $db->sqla("SELECT `user`, `sign`, `diler`, `priveleged` FROM `users` WHE
 <META Content="text/html; Charset=windows-1251" Http-Equiv=Content-type>
 <LINK href="/css/main_v2.css" rel=STYLESHEET type=text/css>
 <LINK href="/css/ch_main_v2.css" rel=STYLESHEET type=text/css>
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 
 <script type="text/javascript" language="javascript" src="/js/mod/jquery.js"></script>
 <SCRIPT type="text/javascript" language="javascript" src="/js/mod/scrollto.js"></SCRIPT>

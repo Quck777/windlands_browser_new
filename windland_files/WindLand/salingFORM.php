@@ -21,6 +21,7 @@
 <META Http-Equiv=Pragma Content=No-Cache>
 <META Http-Equiv=Expires Content=0>
 <LINK href="/css/main_v2.css" rel=STYLESHEET type=text/css>
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 <title>WindLand [Информация о предмете]</title>
 <SCRIPT LANGUAGE='JavaScript' SRC='/js/w.js'></SCRIPT>
 <body topmargin="15" leftmargin="15" rightmargin="15" bottommargin="15" class=inv style="overflow:hidden;">

@@ -99,6 +99,7 @@ include (ROOT.'/inc/func.php');
 ?>
 <META HTTP-EQUIV="Page-Enter" CONTENT="BlendTrans(Duration=0.5)">
 <LINK href="/css/main_v2.css" rel=STYLESHEET type=text/css>
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 <body style="background-color:transparent;">
 <center>
 <br>

@@ -10,6 +10,7 @@ session_start();
 <html>
 <head>
 	<LINK href="/css/main_v2.css" rel="stylesheet" type="text/css">
+<LINK href="/css/modern_game.css" rel=STYLESHEET type=text/css>
 	<title>Регистрация</title>
 	<meta http-equiv=content-type content='text/html; charset=windows-1251'>
 	<SCRIPT src="/js/reg.js"></SCRIPT>
