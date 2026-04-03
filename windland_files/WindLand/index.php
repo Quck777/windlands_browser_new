@@ -161,7 +161,7 @@ $db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
 		
 		<div id="fadebody"></div>
 		<div class="video">
-			<iframe type="text/html" width="383" height="252" src="http://www.youtube.com/embed/nd_CYqU7VGA" frameborder="0"></iframe>
+			<iframe type="text/html" width="383" height="252" src="https://www.youtube.com/embed/nd_CYqU7VGA" frameborder="0"></iframe>
 		</div>
 		
 		<div class="main-news" style="overflow: hidden; display: block; height: 600px;">
