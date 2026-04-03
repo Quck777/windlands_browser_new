@@ -32,20 +32,21 @@ coverage/
 htmlcov/
 .coverage
 
-# Database dumps
-*.sql
-*.db
+# Build directories
+dist/
+build/
+target/
+.gradle/
 
-# Backup files
-*.bak
-*.backup
-*.dump
+# Python specific
+.mypy_cache/
+.pytest_cache/
 
-# OS specific
+# System files
 .DS_Store
 Thumbs.db
 
-# Compressed archives
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -68,9 +69,4 @@ Thumbs.db
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-
-# Web specific
-*.min.js
-*.min.css
-*.map
 ```
