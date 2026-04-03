@@ -1,0 +1,1226 @@
+/* 
+ * game_modern.css - Полный современный дизайн для игры "Земля Ветров"
+ * Совместимо с PHP 5.3 и кодировкой windows-1251
+ * Версия: 3.0 Full Modern Redesign
+ * Все стили игры в одном файле
+ */
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', 'Calibri', 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: #222222;
+    line-height: 1.4;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: #667eea;
+    scrolling: auto;
+    min-height: 100vh;
+}
+
+body {
+    scrollbar-3dlight-color: #DDDDDD;
+    scrollbar-arrow-color: #C6C6C6;
+    scrollbar-base-color: #EEEEEE;
+    scrollbar-darkshadow-color: #EEEEEE;
+    scrollbar-face-color: #EEEEEE;
+    scrollbar-highlight-color: #C6C6C6;
+    scrollbar-shadow-color: #C6C6C6;
+    scrollbar-track-color: #F5F5F5;
+}
+
+IMG {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.clear {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+}
+
+/* ==================== ССЫЛКИ ==================== */
+a {
+    font-family: 'Segoe UI', Verdana, Arial, Tahoma, sans-serif;
+    color: #0066cc;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+a:hover {
+    color: #ff9900;
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(255, 153, 0, 0.4);
+}
+
+a:active {
+    color: #cc5500;
+}
+
+a.Button {
+    display: inline-block;
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    background-color: #FFFFFF;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    border: 1px solid #cccccc;
+    padding: 6px 15px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-weight: normal;
+}
+
+a.Button:hover {
+    background: linear-gradient(to bottom, #fff 0%, #e8e8e8 100%);
+    background-color: #DAE1E8;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ==================== ФОРМЫ ==================== */
+FORM {
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea, select {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    padding: 6px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #ffffff, #fafafa);
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+    background: #ffffff;
+}
+
+input[type="submit"], input[type="button"] {
+    cursor: pointer;
+}
+
+/* ==================== ТАБЛИЦЫ ==================== */
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    font-size: 12px;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    color: #222222;
+}
+
+td {
+    padding: 4px 6px;
+    font-size: 11px;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    color: #222222;
+    vertical-align: middle;
+}
+
+th {
+    background: linear-gradient(to bottom, #667eea, #5568d3);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 10px;
+    text-align: left;
+    border-radius: 3px;
+}
+
+HR {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #CCCCCC, transparent);
+    background-color: #CCCCCC;
+    margin: 12px 0;
+}
+
+/* ==================== ЗАГОЛОВКИ ==================== */
+h1 {
+    font-size: 26px;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, 'Trebuchet MS', Verdana, Arial, sans-serif;
+    color: #2B587A;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 16px;
+    color: #333333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+/* ==================== КНОПКИ ==================== */
+.login {
+    border: 1px solid #C0C0C0;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #666666 0%, #555555 100%);
+    background-color: #666666;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.login:hover {
+    border: 1px solid #AAAAAA;
+    background: linear-gradient(to bottom, #777777 0%, #666666 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.login:disabled {
+    background: linear-gradient(to bottom, #888888 0%, #777777 100%);
+    color: #aaaaaa;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.submit {
+    padding: 6px 14px;
+    font-family: 'Segoe UI', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #4CAF50 0%, #45a049 100%);
+    background-color: #4CAF50;
+    border: 1px solid #3d8b40;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+.submit:hover {
+    background: linear-gradient(to bottom, #5cbf60 0%, #4CAF50 100%);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+.submit:disabled {
+    background: linear-gradient(to bottom, #dddddd 0%, #cccccc 100%);
+    background-color: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    color: #888888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.but {
+    padding: 5px 10px;
+    margin: 2px;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #e5e5e5 100%);
+    background-color: #EBEBEB;
+    border: 1px solid #DDDDDD;
+    color: #222222;
+    font: 12px 'Segoe UI', Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.but:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+.but2 {
+    padding: 5px 10px;
+    margin: 2px;
+    background: linear-gradient(to bottom, #e8e8e8 0%, #d8d8d8 100%);
+    background-color: #D0D0D0;
+    border: 1px solid #CCCCCC;
+    color: #222222;
+    font: 12px 'Segoe UI', Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.but2:hover {
+    background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+.lbutton {
+    font-family: 'Segoe UI', Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #e5e5e5 100%);
+    background-color: #F0F0F0;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.lbutton:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+.head {
+    border-style: none;
+    background: linear-gradient(to bottom, #4a6fa5 0%, #3b5a8a 100%);
+    background-color: #4a6fa5;
+    font-family: 'Segoe UI', Calibri, Verdana, Arial, Tahoma, sans-serif;
+    font-size: 13px;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.head:hover {
+    background: linear-gradient(to bottom, #5a7fb5 0%, #4b6a9a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.head:disabled {
+    background: linear-gradient(to bottom, #999999 0%, #888888 100%);
+    background-color: #999;
+    color: #cccccc;
+    cursor: default;
+    box-shadow: none;
+    transform: none;
+}
+
+/* ==================== ТЕКСТОВЫЕ СТИЛИ ==================== */
+.real {
+    display: inline;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    color: #000000;
+}
+
+.user {
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    color: #222222;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.user:hover {
+    color: #0066cc;
+}
+
+.lvl {
+    font-family: 'Trebuchet MS', Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    color: #3366CC;
+    font-weight: bold;
+}
+
+.time {
+    font-family: 'Trebuchet MS', Tahoma, Arial, sans-serif;
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.timef {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #888888;
+}
+
+.timeisp {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    color: #333300;
+}
+
+.stats {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    font-size: 12px;
+}
+
+.statsn {
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.mf {
+    font-family: Calibri, Verdana, Tahoma, Arial, sans-serif;
+    color: #000000;
+    font-size: 12px;
+}
+
+.ym {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    color: #000000;
+    font-size: 11px;
+}
+
+.items {
+    display: inline;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 11px;
+}
+
+.fitems {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    width: 95%;
+}
+
+.about {
+    font-family: Tahoma, 'Trebuchet MS', Trebuchet, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: #2B587A;
+}
+
+.babout {
+    font-family: Tahoma, 'Trebuchet MS', Trebuchet, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: #2B587A;
+    font-weight: bold;
+}
+
+/* ==================== ЦВЕТНЫЕ КЛАССЫ ==================== */
+.green {
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #008800;
+    text-shadow: 0 0 3px rgba(0, 136, 0, 0.3);
+}
+
+.blue {
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #0066cc;
+    text-shadow: 0 0 3px rgba(0, 102, 204, 0.3);
+}
+
+.red {
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #cc0000;
+    font-weight: bold;
+    text-shadow: 0 0 3px rgba(204, 0, 0, 0.3);
+}
+
+.gray {
+    font-family: Tahoma, Verdana, Arial, sans-serif, 'Lucida Sans';
+    font-size: 11px;
+    color: #888888;
+}
+
+.white {
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+
+/* ==================== БОЕВАЯ СИСТЕМА ==================== */
+.hp {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #cc0000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+.ma {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #0033CC;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+.hp_in_f {
+    border-style: none;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 11px;
+    color: #cc0000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.ma_in_f {
+    border-style: none;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 11px;
+    color: #0033cc;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.hp_bar_container, .ma_bar_container {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, #e0e0e0, #d0d0d0);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 3px 0;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+    border: 1px solid #cccccc;
+}
+
+.hp_bar_fill {
+    height: 100%;
+    background: linear-gradient(to bottom, #ff6b6b 0%, #ee5a5a 50%, #c0392b 100%);
+    transition: width 0.5s ease-in-out;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.3);
+}
+
+.ma_bar_fill {
+    height: 100%;
+    background: linear-gradient(to bottom, #6b9bff 0%, #5a8aef 50%, #395bc0 100%);
+    transition: width 0.5s ease-in-out;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.3);
+}
+
+.fighter_card {
+    background: linear-gradient(to bottom, #f8f8f8 0%, #e8e8e8 100%);
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.fighter_card:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 100%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    border-color: #bbbbbb;
+}
+
+.action_button {
+    background: linear-gradient(to bottom, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 12px;
+}
+
+.action_button:hover {
+    background: linear-gradient(to bottom, #5cbf60 0%, #4CAF50 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.action_button:disabled {
+    background: linear-gradient(to bottom, #cccccc 0%, #bbbbbb 100%);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.turn_indicator {
+    background: linear-gradient(to bottom, #fff3cd 0%, #ffe69c 100%);
+    border: 2px solid #ffc107;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 8px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #856404;
+    animation: pulse 2s infinite;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
+
+.combofight {
+    font-size: 12px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #e5e5e5 100%);
+    background-color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.combofight:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+.fightlong {
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    background: linear-gradient(to right, #e0e0e0 0%, #c0c0c0 50%, #e0e0e0 100%);
+    background-color: #C0C0C0;
+    font-size: 12px;
+    border: 1px solid #CCCCCC;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.fight {
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #222222;
+}
+
+/* ==================== ИНТЕРФЕЙС ==================== */
+.SmallBox {
+    margin: 3px;
+    padding: 8px;
+    border: 1px solid #DFDFDF;
+    text-align: center;
+    vertical-align: middle;
+    background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.SmallBox:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+.weapons_box {
+    padding: 8px;
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #f8f8f8 0%, #e8e8e8 100%);
+    background-color: #F0F0F0;
+    border: 8px solid #AAAAAA;
+    border-width: 8px 1px 1px 1px;
+    color: #222222;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.inv {
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    background: linear-gradient(to bottom, #fafafa 0%, #f0f0f0 100%);
+    background-color: #F3F3F3;
+    border: 1px solid #E0E0E0;
+    border-width: 1px 0 1px 0;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.loc {
+    border: 2px solid #CECECE;
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.laar {
+    border: 1px solid #DDDDDD;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    color: #1A4769;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #e5e5e5 100%);
+    background-color: #EBEBEB;
+    border-radius: 4px;
+    padding: 4px 8px;
+    transition: all 0.25s ease;
+}
+
+.laar:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.alt {
+    background: linear-gradient(to bottom, #e0e0e0 0%, #d0d0d0 100%);
+    background-color: #CCCCCC;
+    font-size: 11px;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.liner {
+    border-width: 1px;
+    border-color: #333333;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    margin: 8px 0;
+}
+
+/* ==================== СПЕЦИАЛЬНЫЕ ЭЛЕМЕНТЫ ==================== */
+.mfb {
+    font-family: Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.bnick {
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.pass {
+    font-weight: bold;
+}
+
+.xy {
+    color: #333333;
+    font-size: 10px;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+}
+
+/* ==================== ПРОЗРАЧНОСТЬ И ЭФФЕКТЫ ==================== */
+.fader {
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
+    opacity: 0.3;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0033CC;
+    transition: opacity 0.3s ease;
+}
+
+.fader:hover {
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+.go_yes {
+    filter: alpha(opacity=82);
+    -moz-opacity: 0.82;
+    -khtml-opacity: 0.82;
+    opacity: 0.82;
+}
+
+.ngo_yes {
+    filter: alpha(opacity=9);
+    -moz-opacity: 0.09;
+    -khtml-opacity: 0.09;
+    opacity: 0.09;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0033CC;
+}
+
+.ngo_yes_invert {
+    filter: alpha(opacity=91);
+    -moz-opacity: 0.91;
+    -khtml-opacity: 0.91;
+    opacity: 0.91;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0033CC;
+}
+
+.Lwhite {
+    background-color: #FFFFFF;
+}
+
+/* ==================== ЧАТ И СООБЩЕНИЯ ==================== */
+.priv {
+    font-family: Tahoma, sans-serif;
+    color: #FFFFFF;
+    font-size: 11px;
+    background: linear-gradient(to bottom, #d6456a 0%, #c83659 100%);
+    background-color: #C83659;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.toyou {
+    font-family: Tahoma, sans-serif;
+    color: #FFFFFF;
+    font-size: 11px;
+    background: linear-gradient(to bottom, #9da0e0 0%, #8b90d5 100%);
+    background-color: #8B90D5;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.clan {
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #8ecc8e 0%, #7dbe7d 100%);
+    background-color: #7DBE7D;
+    font-size: 11px;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.clan_you {
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #6d7f3f 0%, #5c6d33 100%);
+    background-color: #5C6D33;
+    font-size: 11px;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.att {
+    font: bold 12px 'Segoe UI', Verdana, Tahoma, Helvetica, sans-serif;
+    color: #800000;
+}
+
+.al {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #ccf0ff 0%, #bbeeff 100%);
+    background-color: #BBEEFF;
+    color: #333333;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+/* ==================== НАВИГАЦИЯ И МЕНЮ ==================== */
+.menu {
+    z-index: 1000;
+    width: 100px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    display: none;
+}
+
+a.bga {
+    width: 100%;
+    text-align: center;
+    border: 0;
+    font-family: 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;
+    font-size: 10px;
+    color: #333333;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #eeeeee 0%, #dddddd 100%);
+    background-color: #EEEEEE;
+    display: block;
+    padding: 4px 0;
+    transition: all 0.25s ease;
+}
+
+a.bga:hover {
+    background: linear-gradient(to bottom, #666666 0%, #555555 100%);
+    background-color: #666666;
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+a.bg {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: 0;
+    font-family: 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;
+    font-size: 10px;
+    color: #333333;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #aaaaaa 0%, #999999 100%);
+    background-color: #AAAAAA;
+    padding: 4px 0;
+    transition: all 0.25s ease;
+}
+
+a.bg:hover {
+    background: linear-gradient(to bottom, #666666 0%, #555555 100%);
+    background-color: #666666;
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+a.ActiveBc {
+    font-family: Tahoma, sans-serif;
+    font-size: 10px;
+    color: #888888;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(to bottom, #dddddd 0%, #cccccc 100%);
+    background-color: #DDD;
+    padding: 3px;
+    width: 80px;
+    display: block;
+    border-radius: 3px;
+    transition: all 0.25s ease;
+}
+
+a.ActiveBc:hover {
+    color: #BBBBBB;
+    background: linear-gradient(to bottom, #cccccc 0%, #bbbbbb 100%);
+    text-decoration: none;
+}
+
+a.nActiveBc {
+    font-family: Tahoma, sans-serif;
+    font-size: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #333333 0%, #222222 100%);
+    background-color: #222222;
+    padding: 3px;
+    width: 80px;
+    display: block;
+    border-radius: 3px;
+    transition: all 0.25s ease;
+}
+
+a.nActiveBc:hover {
+    background: linear-gradient(to bottom, #444444 0%, #333333 100%);
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.buttonc {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-style: italic;
+    padding: 4px 8px;
+    transition: all 0.25s ease;
+}
+
+.buttonc:hover {
+    color: #ffffcc;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.return_win {
+    border: 1px solid #664444;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 11px;
+    color: #222222;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.return_win:hover {
+    background: linear-gradient(to bottom, #f5f5f5 0%, #e5e5e5 100%);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ==================== ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ ==================== */
+.logo {
+    background-color: #F5F5F5;
+    background-image: url('/images/greylogo.gif');
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.cord {
+    color: #585B44;
+    font: 11px Tahoma, Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.nums {
+    font-family: Georgia, 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;
+    color: #000000;
+    font-size: 13px;
+}
+
+.main_table {
+    border: 2px groove #C0C0C0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#tbox {
+    border-style: none;
+    width: 90px;
+    float: right;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+#tbox:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+/* ==================== СПИСКИ ==================== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-left: 2px;
+    margin: 2px 0;
+}
+
+/* ==================== МОДАЛЬНЫЕ ОКНА ==================== */
+.modal {
+    cursor: pointer;
+}
+
+.modalbox {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 43%;
+    z-index: 99999;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+    background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 100%);
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    padding: 5px;
+}
+
+#fadebody {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 9999;
+}
+
+.close {
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    background: linear-gradient(to bottom, #ff6b6b 0%, #ee5a5a 100%);
+    color: white;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+}
+
+.close:hover {
+    background: linear-gradient(to bottom, #ff8585 0%, #ff6b6b 100%);
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+}
+
+.modalcss3 {
+    padding: 5px;
+}
+
+/* ==================== IFRAME ==================== */
+iframe {
+    background-position: center center;
+    display: block;
+    background-color: transparent;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 1px;
+    border: none;
+}
+
+/* ==================== СКРОЛЛБАРЫ (IE) ==================== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #c1c1c1 0%, #a8a8a8 100%);
+    border-radius: 5px;
+    border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #a8a8a8 0%, #919191 100%);
+}
+
+/* ==================== АНИМАЦИИ ==================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.8), 0 0 30px rgba(102, 126, 234, 0.4);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease;
+}
+
+.slideIn {
+    animation: slideIn 0.5s ease;
+}
+
+/* ==================== УТИЛИТЫ ==================== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.underline { text-decoration: underline; }
+
+/* ==================== АДАПТИВНОСТЬ ==================== */
+@media (max-width: 768px) {
+    body {
+        font-size: 11px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    table {
+        font-size: 11px;
+    }
+    
+    td {
+        font-size: 10px;
+        padding: 3px 4px;
+    }
+    
+    .but, .but2, .lbutton {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}
+
+/* ==================== ПЕЧАТЬ ==================== */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: black;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}
