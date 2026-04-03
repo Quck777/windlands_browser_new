@@ -4,59 +4,37 @@
 #### WindLand RPG v2.0 ######
 ##############################
 
-//session_start();
+// ÐšÐ¾Ð½Ñ„Ð¸Ð³ÑƒÑ€Ð°Ñ†Ð¸Ð¾Ð½Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð» Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð°
+// ÐšÐ¾Ð´Ð¸Ñ€Ð¾Ð²ÐºÐ°: Windows-1251
 
-// Êîíòðîëü îøèáîê íà php óðîâíå
-if ( @$_COOKIE['AdminJoe'] ) Error_Reporting (E_ERROR | E_WARNING | E_PARSE);
-else Error_Reporting (0);
+// ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ñ Ðº Ð±Ð°Ð·Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ…
+define('SQL_HOST', 'localhost');
+define('SQL_USER', 'root');
+define('SQL_PASS', '');
+define('SQL_BASE', 'windland');
 
-// Óñòàíàâëèâàåì ñèñòåìíûå êîíñòàíòû
-DEFINE ('GLOBAL_START_TIME', microtime(true));
-DEFINE ('IMG', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'].'/images');			# 
-DEFINE ('ROOT', $_SERVER['DOCUMENT_ROOT']);
-//DEFINE ('ROOT', str_replace('\configs', '', dirname(__FILE__)));					
-DEFINE ('IMG_ROOT', ROOT.'/images');					// Àáñîëþòíûé ïóòü
-DEFINE ('SERVICE_ROOT', ROOT.'/public_content/service');				// Àáñîëþòíûé ïóòü
-DEFINE ('WEAPON_UPLOADS', '');						// Àáñîëþòíûé ïóòü
+// ÐšÐ¾Ñ€Ð½ÐµÐ²Ð°Ñ Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€Ð¸Ñ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð°
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 
-DEFINE ('HOST', $_SERVER['HTTP_HOST']);						### 
-DEFINE ('IMG_HOST', 'image.'. HOST );						### 
-DEFINE ('LIB_HOST', 'lib.'. HOST );							### 
-DEFINE ('SUP_HOST', 'support.'. HOST );						### 
-DEFINE ('FOR_HOST', 'f.'. HOST );						### 
-
-// Game VersionÍàñòðîéêà ïîäêëþ÷åíèÿ ê áàçå äàííûõ
-DEFINE ('GAME_VERSION', '2.0.0');
-DEFINE ('GAME_BUILD', '2026.01');
-
-
-// ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ðº Ð‘Ð”
-DEFINE ('SQL_HOST', 'localhost');
-DEFINE ('SQL_USER', 'windlands_wl');            ### windlands_wl
-DEFINE ('SQL_PASS', 'poppcpidar440whatis');                     ### poppcpidar440whatis
-DEFINE ('SQL_BASE', 'windlands_wl');	### windlands_wl
-
-
-	# Äåëàåì ìèíèôèëüòðàöèÿ âñÿêîé ÂÖ
-if ( defined('MICROLOAD') )
-{
-	function filter($v){return str_replace("'","",str_replace("\\","",htmlspecialchars($v)));}
-	foreach ($_POST as $key=>$value) $_POST[$key] = filter($value);
-	foreach ($_GET  as $key=>$value) $_GET[$key]  = filter($value);
-	foreach ($_COOKIE  as $key=>$value) $_COOKIE[$key]  = filter($value);
+// ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ Ð¾ÑˆÐ¸Ð±Ð¾Ðº
+if ( @$_COOKIE['AdminJoe'] ) {
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+    ini_set('display_errors', '1');
+} else {
+    error_reporting(0);
+    ini_set('display_errors', '0');
 }
-else include_once (ROOT .'/inc/class/http_check_v2.php');
 
-include_once (ROOT .'/inc/class/mysql.php');
+// Ð¢Ð°Ð¹Ð¼Ð·Ð¾Ð½Ð°
+date_default_timezone_set('Europe/Moscow');
 
+// Ð’ÐµÑ€ÑÐ¸Ñ Ð¸Ð³Ñ€Ñ‹
+define('GAME_VERSION', '2.0.2026');
 
+// URL Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð°
+define('SITE_URL', 'https://cb662053.tw1.ru');
 
-# Ñäåëàåì ïåðåìåííóþ ñ âðåìåíåì è ñäåëàåì âûâîä ÷åðåç ôóíêöèþ) 
-$GLOBAL_TIME = time();
-function tme()
-{
-	GLOBAL $GLOBAL_TIME;
-	return $GLOBAL_TIME;
-}
+// ÐŸÑƒÑ‚ÑŒ Ðº Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸ÑÐ¼
+define('IMG', '/img');
 
 ?>
