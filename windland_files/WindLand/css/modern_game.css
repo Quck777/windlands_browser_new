@@ -1,0 +1,390 @@
+/* Modern Game Styles - Земля Ветров */
+/* Совместимо с PHP 5.3 и кодировкой windows-1251 */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #222;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    scrollbar-width: thin;
+    scrollbar-color: #3cb0d6 #e8e8e8;
+}
+
+body::-webkit-scrollbar { width: 8px; }
+body::-webkit-scrollbar-track { background: #e8e8e8; }
+body::-webkit-scrollbar-thumb { background: #3cb0d6; border-radius: 4px; }
+body::-webkit-scrollbar-thumb:hover { background: #2a8ab8; }
+
+/* Head buttons */
+.head {
+    border: none;
+    background: linear-gradient(180deg, #4a9fd8 0%, #3a8fc8 100%);
+    font-family: 'Segoe UI', Calibri, Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.head:hover:not(:disabled) {
+    background: linear-gradient(180deg, #5aafef 0%, #4a9fd8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(60,176,214,0.4);
+}
+
+.head:disabled {
+    background: linear-gradient(180deg, #999 0%, #888 100%);
+    color: #ccc;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Iframes */
+iframe {
+    background: transparent;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 1px;
+    border: none;
+}
+
+iframe::-webkit-scrollbar { width: 6px; }
+iframe::-webkit-scrollbar-track { background: #f0f0f0; }
+iframe::-webkit-scrollbar-thumb { background: #3cb0d6; border-radius: 3px; }
+
+/* HR */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #3cb0d6 50%, transparent 100%);
+    margin: 10px 0;
+}
+
+/* Forms */
+form { margin: 0; }
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+    color: #1a4a6e;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.real {
+    display: inline;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    color: #000;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    color: #222;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+td {
+    padding: 6px 10px;
+    font-size: 11px;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    color: #222;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f5f9fb; }
+
+/* Links */
+a {
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    color: #2a7bb8;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 11px;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #1a5a88;
+    text-decoration: underline;
+}
+
+a.Bold {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1a4a6e;
+}
+
+a.Bold:hover {
+    color: #800000;
+}
+
+/* Buttons */
+a.Button {
+    display: inline-block;
+    background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 12px;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 6px 15px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+a.Button:hover {
+    background: linear-gradient(180deg, #f8f8f8 0%, #e8e8e8 100%);
+    border-color: #bbb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* SmallBox */
+.SmallBox {
+    margin: 3px;
+    padding: 8px;
+    border: 1px solid #d0e4f0;
+    background: linear-gradient(180deg, #f8fbfe 0%, #e8f4f8 100%);
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+/* Login inputs */
+.login {
+    border: 1px solid #c0c0c0;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    background: #fff;
+    color: #111;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.login:focus {
+    border-color: #3cb0d6;
+    box-shadow: 0 0 8px rgba(60,176,214,0.4);
+    outline: none;
+}
+
+.login:hover {
+    border-color: #aaa;
+}
+
+.login2 {
+    padding: 4px;
+    margin: 2px;
+    background: transparent;
+    border: 1px solid #bbb;
+    color: #fff;
+    font: 14px 'Trebuchet MS', Trebuchet, Tahoma, sans-serif;
+    border-radius: 4px;
+}
+
+/* Submit buttons */
+.submit {
+    padding: 6px 12px;
+    font-family: 'Segoe UI', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    background: linear-gradient(180deg, #f5f5f5 0%, #e0e0e0 100%);
+    border: 1px solid #aaa;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.submit:hover {
+    background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+    border-color: #999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.submit:active {
+    background: linear-gradient(180deg, #e0e0e0 0%, #d0d0d0 100%);
+    transform: translateY(1px);
+}
+
+.submit:disabled {
+    background: #ddd;
+    color: #999;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Panels and containers */
+.panel {
+    background: #fff;
+    border: 1px solid #d0e4f0;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.panel-header {
+    background: linear-gradient(180deg, #4a9fd8 0%, #3a8fc8 100%);
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px 8px 0 0;
+    margin: -15px -15px 15px -15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Chat styles */
+.chat-container {
+    background: #fff;
+    border: 1px solid #d0e4f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-messages {
+    background: #fafbfc;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    padding: 5px 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background: #f0f5f8;
+}
+
+.chat-message.system {
+    background: #fff8e0;
+    color: #856404;
+}
+
+.chat-message.battle {
+    background: #ffe8e8;
+    color: #800000;
+}
+
+.chat-input {
+    border-top: 1px solid #e8e8e8;
+    padding: 10px;
+    background: #f8f9fa;
+}
+
+/* Info boxes */
+.info-box {
+    background: linear-gradient(135deg, #f8fbfe 0%, #e8f4f8 100%);
+    border: 1px solid #c0e0f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+}
+
+.info-box-title {
+    font-weight: bold;
+    color: #1a4a6e;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+/* Status indicators */
+.status-online {
+    color: #28a745;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(40,167,69,0.3);
+}
+
+.status-offline {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.status-busy {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10,30,50,0.95);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .panel {
+        margin: 5px;
+        padding: 10px;
+    }
+    
+    table {
+        font-size: 11px;
+    }
+    
+    td {
+        padding: 4px 6px;
+    }
+}
