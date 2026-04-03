@@ -1,6 +1,7 @@
 <?php
 ##############################
-#### Mod Joe. 13.04.2013 #####
+#### Global Update 2026 #####
+#### WindLand RPG v2.0 ######
 ##############################
 
 //session_start();
@@ -24,10 +25,15 @@ DEFINE ('LIB_HOST', 'lib.'. HOST );							###
 DEFINE ('SUP_HOST', 'support.'. HOST );						### 
 DEFINE ('FOR_HOST', 'f.'. HOST );						### 
 
-// Настройка подключения к базе данных
+// Game VersionНастройка подключения к базе данных
+DEFINE ('GAME_VERSION', '2.0.0');
+DEFINE ('GAME_BUILD', '2026.01');
+
+
+// РџРѕРґРєР»СЋС‡РµРЅРёРµ Рє Р‘Р”
 DEFINE ('SQL_HOST', 'localhost');
-DEFINE ('SQL_USER', 'windlands_wl');		### windlands_wl
-DEFINE ('SQL_PASS', 'poppcpidar440whatis');			### poppcpidar440whatis
+DEFINE ('SQL_USER', 'windlands_wl');            ### windlands_wl
+DEFINE ('SQL_PASS', 'poppcpidar440whatis');                     ### poppcpidar440whatis
 DEFINE ('SQL_BASE', 'windlands_wl');	### windlands_wl
 
 
