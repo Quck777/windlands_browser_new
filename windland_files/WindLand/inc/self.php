@@ -62,7 +62,7 @@
 				$db->sql('DELETE FROM `mail_hesh` WHERE `uid` = '.UID);
 				$hesh = sha1(time().rand(0, time()));
 				$db->sql('INSERT INTO `mail_hesh` (`uid`, `hesh`, `date`) VALUES ('.UID.', "'.$hesh.'", '.tme().');');
-				$linc = 'http://'.HOST.'/mail.php?do=check&hesh='.$hesh;
+				$linc = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://') . HOST . '/mail.php?do=check&hesh='.$hesh;
 				if ( send_mail($mail, 'Для подтверждения Вашего E-Mail перейдите по ссылке <a href="'.$linc.'">'.$linc.'</a>', 'Подтверждение E-Mail') )
 				{
 					$player->pers['mail_good'] = 2;

@@ -172,7 +172,7 @@ echo '
 	while($s = mysql_fetch_array($sql,MYSQL_ASSOC)){
 	$igg ++;
 	if (($igg+1)%4==0 and $igg!=0) $demos .=  '<tr>';
-	$demos .= '<td align="center" width="20%"><img src="http://woe.by/images/weapons/'.$s["address"].'">';
+	$demos .= '<td align="center" width="20%"><img src="https://woe.by/images/weapons/'.$s["address"].'">';
 	$demos .= '</td>';
 	}
 	$demos .= '</tr></table>';
