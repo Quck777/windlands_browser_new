@@ -632,3 +632,191 @@ function UP_TOP(a)
 {
 document.getElementById('TOP').innerHTML = a;
 }
+// === Улучшения боевой системы ===
+
+// Функция для плавного обновления полосок здоровья и маны
+function update_bars() {
+    for (var i = 0; i < t1u.length; i++) {
+        var hpPercent = (t1c[i] / t1h[i]) * 100;
+        var maPercent = (t1cm[i] / t1m[i]) * 100;
+        var hpElem = document.getElementById('t1_hp_' + i);
+        var maElem = document.getElementById('t1_ma_' + i);
+        if (hpElem) hpElem.style.width = hpPercent + '%';
+        if (maElem) maElem.style.width = maPercent + '%';
+    }
+    for (var i = 0; i < t2u.length; i++) {
+        var hpPercent = (t2c[i] / t2h[i]) * 100;
+        var maPercent = (t2cm[i] / t2m[i]) * 100;
+        var hpElem = document.getElementById('t2_hp_' + i);
+        var maElem = document.getElementById('t2_ma_' + i);
+        if (hpElem) hpElem.style.width = hpPercent + '%';
+        if (maElem) maElem.style.width = maPercent + '%';
+    }
+}
+
+// Функция подсветки текущего хода
+function highlight_current_turn() {
+    var indicator = document.getElementById('turn_indicator');
+    if (indicator && can_turn == 1) {
+        indicator.innerHTML = 'Ваш ход! Выберите действие';
+        indicator.style.display = 'block';
+    } else if (indicator) {
+        indicator.innerHTML = 'Ход противника...';
+        indicator.style.display = 'block';
+    }
+}
+
+// Функция для анимации получения урона
+function damage_animation(targetId, damage) {
+    var elem = document.getElementById(targetId);
+    if (elem) {
+        elem.style.transition = 'all 0.3s ease';
+        elem.style.transform = 'scale(0.95)';
+        elem.style.filter = 'brightness(0.7) sepia(1) hue-rotate(-50deg) saturate(3)';
+        setTimeout(function() {
+            elem.style.transform = 'scale(1)';
+            elem.style.filter = 'none';
+        }, 300);
+    }
+}
+
+// Функция для отображения всплывающего текста урона
+function show_damage_text(x, y, damage, isCritical) {
+    var dmgText = document.createElement('div');
+    dmgText.className = 'damage_popup';
+    dmgText.innerHTML = (isCritical ? '💥 ' : '') + '-' + damage;
+    dmgText.style.position = 'absolute';
+    dmgText.style.left = x + 'px';
+    dmgText.style.top = y + 'px';
+    dmgText.style.fontSize = isCritical ? '24px' : '18px';
+    dmgText.style.fontWeight = 'bold';
+    dmgText.style.color = isCritical ? '#ff0000' : '#cc0000';
+    dmgText.style.textShadow = '2px 2px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff';
+    dmgText.style.pointerEvents = 'none';
+    dmgText.style.zIndex = '1000';
+    dmgText.style.animation = 'damageFloat 1s ease-out forwards';
+    document.body.appendChild(dmgText);
+    setTimeout(function() { dmgText.remove(); }, 1000);
+}
+
+// Добавляем стили для всплывающего урона в CSS
+var style = document.createElement('style');
+style.innerHTML = '@keyframes damageFloat { 0% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-50px) scale(1.2); } }';
+document.head.appendChild(style);
+
+// Функция быстрого выбора цели
+function quick_target_select(team, index) {
+    if (team == 1 && t1u[index]) {
+        return base64_decode(t1b[index]);
+    } else if (team == 2 && t2u[index]) {
+        return base64_decode(t2b[index]);
+    }
+    return null;
+}
+
+// Функция для отображения статуса боя
+function show_battle_status() {
+    var status = '';
+    if (LIFE1 > 0 && LIFE2 > 0) {
+        status = '<div class="turn_indicator">Бой идет! Команда 1: ' + LIFE1 + ' | Команда 2: ' + LIFE2 + '</div>';
+    } else if (LIFE1 > 0) {
+        status = '<div class="turn_indicator" style="background: linear-gradient(to bottom, #d4edda, #c3e6cb); border-color: #28a745; color: #155724;">Победа команды 1!</div>';
+    } else if (LIFE2 > 0) {
+        status = '<div class="turn_indicator" style="background: linear-gradient(to bottom, #f8d7da, #f5c6cb); border-color: #dc3545; color: #721c24;">Победа команды 2!</div>';
+    }
+    return status;
+}
+
+// Функция для подсказок по действиям
+function show_action_tooltip(action, element) {
+    var tooltips = {
+        'ug': 'Удар в голову - высокий урон, низкая точность',
+        'ut': 'Удар в торс - средний урон, средняя точность',
+        'uj': 'Удар в живот - средний урон, высокая точность',
+        'un': 'Удар в ноги - низкий урон, очень высокая точность',
+        'bg': 'Блок головой - защита от ударов в голову',
+        'bt': 'Блок торсом - защита от ударов в торс',
+        'bj': 'Блок животом - защита от ударов в живот',
+        'bn': 'Блок ногами - защита от ударов в ноги'
+    };
+    
+    if (tooltips[action]) {
+        element.title = tooltips[action];
+    }
+}
+
+// Инициализация улучшений при загрузке
+if (typeof show_fight_head !== 'undefined') {
+    var original_show_fight_head = show_fight_head;
+    show_fight_head = function(oruj, travm, timeout) {
+        original_show_fight_head(oruj, travm, timeout);
+        setTimeout(function() {
+            update_bars();
+            highlight_current_turn();
+        }, 100);
+    };
+}
+
+// Добавляем обработчики для зон атаки/защиты
+function init_zone_handlers() {
+    var zones = ['ug', 'ut', 'uj', 'un', 'bg', 'bt', 'bj', 'bn'];
+    for (var i = 0; i < zones.length; i++) {
+        var elem = document.getElementById(zones[i]);
+        if (elem) {
+            elem.onmouseover = function() { show_action_tooltip(this.id, this); };
+            elem.onclick = function() { 
+                if (this.className.indexOf('selected') >= 0) {
+                    this.classList.remove('selected');
+                } else {
+                    this.classList.add('selected');
+                }
+            };
+        }
+    }
+}
+
+// Запускаем инициализацию после загрузки страницы
+if (window.addEventListener) {
+    window.addEventListener('load', init_zone_handlers, false);
+} else if (window.attachEvent) {
+    window.attachEvent('onload', init_zone_handlers);
+}
+
+// Функция для комбо-ударов (новая возможность)
+var combo_count = 0;
+var last_hit_time = 0;
+
+function check_combo() {
+    var now = new Date().getTime();
+    if (now - last_hit_time < 2000) {
+        combo_count++;
+    } else {
+        combo_count = 1;
+    }
+    last_hit_time = now;
+    
+    if (combo_count >= 3) {
+        return true; // Комбо активировано
+    }
+    return false;
+}
+
+// Функция для специального режима берсерка
+var berserk_mode = false;
+function toggle_berserk() {
+    berserk_mode = !berserk_mode;
+    if (berserk_mode) {
+        document.body.classList.add('berserk_active');
+        return 'Режим берсерка активирован! Урон увеличен, защита снижена.';
+    } else {
+        document.body.classList.remove('berserk_active');
+        return 'Режим берсерка деактивирован.';
+    }
+}
+
+// Стили для режима берсерка
+var berserkStyle = document.createElement('style');
+berserkStyle.innerHTML = '.berserk_active .fighter_card { animation: berserkPulse 0.5s infinite; } @keyframes berserkPulse { 0%, 100% { box-shadow: 0 0 10px #ff0000; } 50% { box-shadow: 0 0 20px #ff4444; } }';
+document.head.appendChild(berserkStyle);
+
+console.log('Боевая система улучшена! Новые функции: update_bars(), highlight_current_turn(), damage_animation(), show_damage_text(), quick_target_select(), show_battle_status(), toggle_berserk()');

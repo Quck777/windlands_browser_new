@@ -359,6 +359,9 @@ elseif ($timeout>0 and !$_FINISHED and $CAN_TURN==0)
 	 	echo "show_message_in_f('<div align=center class=title>������� ���� ���������.</div>');";
 }
 	
+// Добавляем индикатор хода и улучшенный интерфейс
+echo "<div id='turn_indicator' class='turn_indicator' style='display:none;'></div>";
+
 set_vars("can_turn=".intval($_CAN_TURN)."",$player->pers["uid"]);
 
 $log = $db->sql("SELECT time,log FROM fight_log WHERE cfight=".$player->pers["cfight"]." ORDER BY turn DESC LIMIT 0,3", __FILE__,__LINE__,__FUNCTION__,__CLASS__);
