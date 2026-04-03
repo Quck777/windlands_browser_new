@@ -1,20 +1,16 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 ##############################
 #### Mod Joe. 13.04.2013 #####
 ##############################
 	Error_Reporting(0);
 	include ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');
-	$main_conn = mysql_connect (SQL_HOST,SQL_USER,SQL_PASS,SQL_BASE);
-	mysql_select_db(SQL_BASE, $main_conn);
-	mysql_query("SET NAMES cp1251");
+	$db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
 	
-	$sql = mysql_query('SELECT `address` FROM `images` WHERE `stype`="'.addslashes($_GET['type']).'" ');
+	// Кодировка уже установлена
+	
+	$sql = $db->sql('SELECT `address` FROM `images` WHERE `stype`="'.addslashes($_GET['type']).'" ');
 	
 	$check = 1;
 	while($s = mysql_fetch_row($sql) and $check++)

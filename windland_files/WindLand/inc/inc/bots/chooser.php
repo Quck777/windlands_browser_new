@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 $botU= array();
 $botU["ug"] = 0;$botU["ut"] = 0;$botU["uj"] = 0;$botU["un"] = 0;
 $mm = explode("|","ug|ut|uj|un");

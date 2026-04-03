@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 require (ROOT.'/globals/functions/QUEST.php');
 ?>
 <table width="100%" background="/images/bg21.gif" cellpadding="0" height="100%" cellspacing="0" border="0"><tr><td valign="top">

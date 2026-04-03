@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 	if (@$http->get["attack"])
 	{
 			$bid = $db->sqlr("SELECT id FROM bots WHERE user='".$http->post["name"]."' and level=".intval($http->post["lvl"])." and special=0");

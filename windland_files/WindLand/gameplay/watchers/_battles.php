@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 
 	echo "<a class=timef href=info.php?id=".$player->pers["uid"]."&do_w=battles&last=day>За последний день</a> | <a class=timef href=info.php?id=".$player->pers["uid"]."&do_w=battles&last=3day>За последние 3 дня</a> | <a class=timef href=info.php?id=".$player->pers["uid"]."&do_w=battles&last=week>За последнюю неделю</a> | <a class=timef href=info.php?id=".$player->pers["uid"]."&do_w=battles&last=all>Все</a>";
 	if (empty($http->get["last"]) or $http->get["last"]=='day') $last = " and time>".(tme()-86400);

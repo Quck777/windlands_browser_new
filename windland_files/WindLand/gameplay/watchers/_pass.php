@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 if ($p18<>1) exit;
 
 	$res = $db->sql("SELECT * FROM `watch_passmail` WHERE `uid`=".$player->pers["uid"]." ORDER BY `date` DESC");

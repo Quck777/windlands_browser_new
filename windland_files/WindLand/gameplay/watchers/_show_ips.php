@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 if ($p15<>1) exit;
 
 	if (empty($http->post["mlt"]))

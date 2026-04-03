@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 	
 	$cell_type = $db->sqlr("SELECT type FROM nature WHERE x=".$player->pers["x"]." and y=".$player->pers["y"]."");
 	

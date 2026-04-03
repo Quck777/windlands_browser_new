@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 
 include_once (ROOT.'/inc/class/quest.class.php');
 $que = new jQuest($player->pers);

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 if ( $priv['eclans']==2 ) //; else exit;
 	$adm = true; else $adm = false;
 

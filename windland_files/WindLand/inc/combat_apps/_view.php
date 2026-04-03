@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 	#View all apps::
 	$allapps = $db->sql("SELECT * FROM app_for_fight WHERE type=".$cat."", __FILE__,__LINE__,__FUNCTION__,__CLASS__);
 	$s = '';

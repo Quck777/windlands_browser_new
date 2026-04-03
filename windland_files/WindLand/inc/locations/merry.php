@@ -1,18 +1,14 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 function get_uid($user)
 {
-$row=mysql_fetch_array(mysql_query("SELECT `uid` FROM `users` WHERE `user`='".htmlspecialchars($user)."'"));
+$row=mysql_fetch_array($db->sql("SELECT `uid` FROM `users` WHERE `user`='".htmlspecialchars($user)."'"));
 return $row[0];
 }
 function get_merry($user)
 {
-$row=mysql_fetch_array(mysql_query("SELECT `merry` FROM `users` WHERE `user`='".htmlspecialchars($user)."'"));
+$row=mysql_fetch_array($db->sql("SELECT `merry` FROM `users` WHERE `user`='".htmlspecialchars($user)."'"));
 return $row[0];
 }
 //Выполняем Посты by Enternet Acum
@@ -36,8 +32,8 @@ if(!empty($_POST))
 	{
 	if($err!="1")
 	{
-	mysql_query("UPDATE `users` SET `merry`='".get_uid($_POST["merry2"])."' WHERE `uid`='".get_uid($_POST["merry1"])."'");
-	mysql_query("UPDATE `users` SET `merry`='".get_uid($_POST["merry1"])."' WHERE `uid`='".get_uid($_POST["merry2"])."'");
+	$db->sql("UPDATE `users` SET `merry`='".get_uid($_POST["merry2"])."' WHERE `uid`='".get_uid($_POST["merry1"])."'");
+	$db->sql("UPDATE `users` SET `merry`='".get_uid($_POST["merry1"])."' WHERE `uid`='".get_uid($_POST["merry2"])."'");
 	$msg="Заключен брак между ".$_POST["merry1"]." и ".$_POST["merry2"]."";
 	say_to_chat ("a","Заключены узы брака между <b>".$_POST["merry1"]."</b> и <b>".$_POST["merry2"]."</b>. //035 ",0,'','*',0);
 	}
@@ -47,8 +43,8 @@ if(!empty($_POST))
 	{
 	if($err!="1")
 	{
-	mysql_query("UPDATE `users` SET `merry`='0' WHERE `uid`='".get_uid($_POST["merry1"])."'");
-	mysql_query("UPDATE `users` SET `merry`='0' WHERE `uid`='".get_uid($_POST["merry2"])."'");
+	$db->sql("UPDATE `users` SET `merry`='0' WHERE `uid`='".get_uid($_POST["merry1"])."'");
+	$db->sql("UPDATE `users` SET `merry`='0' WHERE `uid`='".get_uid($_POST["merry2"])."'");
 	$msg="Разорвали узы брака ".$_POST["merry1"]." и ".$_POST["merry2"]."";
 	say_to_chat ("a","Разорвали узы брака <b>".$_POST["merry1"]."</b> и <b>".$_POST["merry2"]."</b>. //006 ",0,'','*',0);
 	}

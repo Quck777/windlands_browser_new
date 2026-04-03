@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 mod_st_start("Удар бота",0);
 
 $pers["botlibnew"] = $pers["botlib"];

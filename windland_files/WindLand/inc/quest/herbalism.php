@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 if (isset($_GET["herbal"]) and $pers["waiter"]<tme())
 {
 	if ($cell["last_herbal_change"]<(time()-HERBAL_CHANGE))

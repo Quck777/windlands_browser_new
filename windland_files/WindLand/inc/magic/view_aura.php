@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 	function vaura($bl,$pers,$use=1)
 	{
 		GLOBAL $types,$_INV;

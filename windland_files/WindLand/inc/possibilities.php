@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 //if (UID!=7) exit;
 
 $do = isset($http->get['do']) ? intval($http->get['do']) : 0;

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 	$z = sqlr("SELECT COUNT(*) FROM `users` WHERE referal_uid=".UID."");
 	echo "Вы привели в игру <b>".$z."</b> персонажа.<hr>";
 	if ($pers["refc"] != $z)

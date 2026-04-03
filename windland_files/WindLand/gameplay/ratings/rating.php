@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 include (ROOT.'/gameplay/ratings/main_rating.php'); 
 include (ROOT.'/gameplay/ratings/hunt_rating.php');
 include (ROOT.'/gameplay/ratings/alch_rating.php');
