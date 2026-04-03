@@ -1,4 +1,41 @@
 ```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+.env
+.env.local
+.env.*
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Editors
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
 # Compressed files
 *.zip
 *.gz
@@ -18,8 +55,44 @@
 *.Z
 *.lz
 *.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+
+# Build directories
+dist/
+build/
+target/
+.gradle/
+
+# Python specific
+*.pyo
+*.pyd
+*.egg-info/
+.Python
+pip-log.txt
+.tox/
+.coverage*
+
+# Web specific
+*.min.js
+*.min.css
+.sass-cache/
+.cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# IDE specific
+.vs/
+.settings/
+.project
+.classpath
+.c9revisions/
+.platformio/
 ```
