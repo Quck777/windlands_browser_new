@@ -35,7 +35,7 @@ $INFO_TEXT .= '<font class=title>ЛИЧНАЯ ИНФОРМАЦИЯ</font>';
 $INFO_TEXT .= "Имя:<b> ".htmlspecialchars($player->pers["name"])."</b><br>";
 $INFO_TEXT .= "Город:<b> ".htmlspecialchars($player->pers["city"])."</b><br>";
 $INFO_TEXT .= "Страна:<b> ".htmlspecialchars($player->pers["country"])."</b><br>";
-if ($player->pers["icq"])$INFO_TEXT .= "ICQ:<b> ".$player->pers["icq"]."</b><img src='http://web.icq.com/whitepages/online?icq=".$player->pers["icq"]."&img=26' height=12><br>";
+if ($player->pers["icq"])$INFO_TEXT .= "ICQ:<b> ".$player->pers["icq"]."</b><img src='https://web.icq.com/whitepages/online?icq=".$player->pers["icq"]."&img=26' height=12><br>";
 if ($player->pers["vkid"])$INFO_TEXT .= "ВКонтакте:<b><a class=timef target=_blank href='http://vkontakte.ru/profile.php?id=".$player->pers["vkid"]."'>".$player->pers["vkid"]."</a></b><br>";
 if ($player->pers["pol"]=="male") $INFO_TEXT .= "Пол:<b> Мужской</b><br>" ; else $INFO_TEXT .= "Пол:<b> Женский</b><br>";
 if ($chars["about"]) $INFO_TEXT .= "<font class=title>О СЕБЕ</font><br>".str_replace ("

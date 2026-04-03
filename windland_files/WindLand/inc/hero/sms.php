@@ -19,7 +19,7 @@
 		// printing the form
 		// печатаем форму
 		echo <<<Form
-		<center class=but><form action="http://bank.smscoin.com/bank/" method="post" target=_blank>
+		<center class=but><form action="https://bank.smscoin.com/bank/" method="post" target=_blank>
 			<p>
 				<input name="s_purse" type="hidden" value="$purse" />
 				<input name="s_order_id" type="hidden" value="$order_id" />

@@ -52,7 +52,7 @@ function generate_sostav($us)
 	$r.= '<tr><td>';
 	if ( defined('ALIGN') ) $r.= "<img src='/images/signs/align/".ALIGN.".gif' width=15 height=12 border=0> ";
 	$r.= "<img src='/images/signs/".$us['sign'].".gif' width=15 height=12 border=0> <font class=user>".$us['user']."</font><font class=lvl>[".$us['level']."]</font>";
-	$r.= '<img src=\'/public_content/chimg/i.gif\' onclick="javascript:window.open(\'http://'.HOST.'/info.php?'.($us['user']).'\',\'_blank\')" style=\'cursor:pointer\'></td>';
+	$r.= '<img src=\'/public_content/chimg/i.gif\' onclick="javascript:window.open(\(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://') . HOST . '/info.php?.($us['user']).'\',\'_blank\')" style=\'cursor:pointer\'></td>';
 	$r.= "<td><img src='/images/emp.gif' width=50 height=1></td><td><b style='color:".$color."'>"._StateByIndex($us['clan_state'])."</b>[".$us['state']."]</td>";
 	$r.= '<td>'.$loc.'</td>';
 	$r.= "</tr>";

@@ -82,8 +82,8 @@ $db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
 			<div class="h-menu-items">
 				<a href="/?" class="item item1"><span></span></a><span class="sep"></span>
 				<a href="/reg.php" class="item item2" id="form_show"><span></span></a><span class="sep"></span>
-				<a href="http://f.cb662053.tw1.ru/" class="item item3 "><span></span></a><span class="sep"></span>
-				<a href="http://lib.cb662053.tw1.ru/" class="item item4"><span></span></a><span class="sep"></span>
+				<a href="https://f.cb662053.tw1.ru/" class="item item3 "><span></span></a><span class="sep"></span>
+				<a href="https://lib.cb662053.tw1.ru/" class="item item4"><span></span></a><span class="sep"></span>
 				<a href="/services.php" class="item item5"><span></span></a><span class="sep"></span>
 				<a href="/client/WindLand.exe" class="item item6"><span></span></a><span class="sep"></span>
 			</div>
@@ -92,7 +92,7 @@ $db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
 				<a href="#google" class="ic ic1"></a>
 				<a href="#fb" class="ic ic2"></a>
 				<a href="#twit" class="ic ic3"></a>
-				<a href="http://vk.com/club52844767" class="ic ic4"></a>
+				<a href="https://vk.com/club52844767" class="ic ic4"></a>
 			</div>
 		</div>
 		
@@ -210,7 +210,7 @@ while ( $n = mysql_fetch_assoc($news) )
 					<div class="comments">
 						
 					</div>
-					<a href="http://lib.cb662053.tw1.ru/?act=1&subact='.$n['id'].'" class="more" target="_blank"></a>
+					<a href="https://lib.cb662053.tw1.ru/?act=1&subact='.$n['id'].'" class="more" target="_blank"></a>
 				</div>
 			</div>';
 }

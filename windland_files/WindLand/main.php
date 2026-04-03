@@ -125,7 +125,7 @@ js=13;//--></script><script language="javascript" type="text/javascript"><!--
 
 a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
 'height="40" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
-<noscript><a target="_top" href="http://top.mail.ru/jump?from=2011637">
-<img src="http://d1.cb.be.a1.top.mail.ru/counter?js=na;id=2011637;t=130"
+<noscript><a target="_top" href="https://top.mail.ru/jump?from=2011637">
+<img src="https://d1.cb.be.a1.top.mail.ru/counter?js=na;id=2011637;t=130"
 height="40" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
 <script language="javascript" type="text/javascript"><!--

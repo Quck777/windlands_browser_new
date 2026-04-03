@@ -11,7 +11,7 @@ else Error_Reporting (0);
 
 // Устанавливаем системные константы
 DEFINE ('GLOBAL_START_TIME', microtime(true));
-DEFINE ('IMG', $_SERVER['HTTP_HOST'].'/images');			# 
+DEFINE ('IMG', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'].'/images');			# 
 DEFINE ('ROOT', $_SERVER['DOCUMENT_ROOT']);
 //DEFINE ('ROOT', str_replace('\configs', '', dirname(__FILE__)));					
 DEFINE ('IMG_ROOT', ROOT.'/images');					// Абсолютный путь
