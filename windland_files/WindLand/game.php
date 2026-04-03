@@ -6,6 +6,7 @@
 
 include ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');
 $db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
+include (ROOT.'/inc/class/http_check_v2.php');
 $http = new Jhttp;
 ##############################
 

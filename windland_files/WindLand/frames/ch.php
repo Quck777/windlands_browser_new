@@ -9,6 +9,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');
 // Подключаемся к SQL базе
 $db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
 // Подключаем класс обработки входящих данных
+include (ROOT.'/inc/class/http_check_v2.php');
 $http = new Jhttp;
 ############################## 
 include (ROOT.'/inc/class/Player.php');

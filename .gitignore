@@ -1,31 +1,19 @@
 ```php
-# Environment and configuration
-.env
-.env.local
-.env.*
+# PHP related
+*.php~
+*.php.bak
+*.php.swp
 
-# Logs
+# Cache and temporary files
+*.tmp
+*.temp
+*.cache
 *.log
 
-# Temporary files
-*.tmp
-*.swp
-
-# Cache directories
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Build and distribution
-dist/
-build/
-target/
-
-# Dependencies
-node_modules/
-vendor/
-composer.lock
+# Backup files
+*~
+.bak
+.backup
 
 # IDE specific
 .vscode/
@@ -33,45 +21,16 @@ composer.lock
 *.swp
 *.swo
 
+# Environment
+.env
+.env.local
+.env.*
+
+# Dependencies and build artifacts
+vendor/
+composer.lock
+
 # OS generated files
 .DS_Store
 Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# PHP specific
-*.php~
-*.php.bak
-
-# Database
-*.sql
-*.db
-*.sqlite
-
-# Compression
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
 ```
