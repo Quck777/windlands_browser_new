@@ -1,3 +1,9 @@
+/* 
+ * main_v2.css - Улучшенные стили для игры "Земля Ветров"
+ * Совместимо с PHP 5.3 и кодировкой windows-1251
+ * Версия: 2.0 с современным дизайном
+ */
+
 IMG
 {
 	border-style: none;
@@ -5,21 +11,35 @@ IMG
 
 .head        {
 	border-style: none;
-	background-color: transparent;
-	font-family: Calibri , Verdana, Arial, Tahoma;
+	background: linear-gradient(to bottom, #4a6fa5, #3b5a8a);
+	background-color: #4a6fa5;
+	font-family: 'Segoe UI', Calibri, Verdana, Arial, Tahoma;
 	FONT-SIZE: 13px;
 	COLOR: #FFF;
 	cursor: pointer;
 	font-weight: bold;
+	padding: 6px 12px;
+	border-radius: 4px;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.head:hover {
+	background: linear-gradient(to bottom, #5a7fb5, #4b6a9a);
+	transform: translateY(-1px);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.3);
 }
 .head:disabled {
 	border-style: none;
-	background-color: transparent;
-	font-family: Calibri , Verdana, Arial, Tahoma;
+	background-color: #999;
+	background: linear-gradient(to bottom, #999, #888);
+	font-family: 'Segoe UI', Calibri, Verdana, Arial, Tahoma;
 	FONT-SIZE: 13px;
-	COLOR: #666;
+	COLOR: #ccc;
 	cursor: default;
 	font-weight: bold;
+	box-shadow: none;
+	transform: none;
 }
 iframe{
 	background-position: center center;
@@ -32,8 +52,10 @@ iframe{
 HR{
 	border: 0px none;
 	color: #CCCCCC;
+	background: linear-gradient(to right, transparent, #CCCCCC, transparent);
 	background-color: #CCCCCC;
 	height: 1px;
+	margin: 10px 0;
 }
 
 FORM
@@ -44,8 +66,11 @@ FORM
 	MARGIN-BOTTOM: 0px;
 }
 h2 {
-	font-family: Tahoma, "Trebuchet MS", Trebuchet, Verdana, Arial;
+	font-family: 'Segoe UI', Tahoma, "Trebuchet MS", Trebuchet, Verdana, Arial;
 	color: #2B587A;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+	margin-bottom: 15px;
+	font-size: 18px;
 }
 .real{
 	display: inline;
@@ -67,10 +92,12 @@ BODY
 	scrollbar-highlight-color: #C6C6C6;
 	scrollbar-shadow-color: #C6C6C6;
 	scrollbar-track-color: #EEEEEE;
-	font-family: Trebuchet , "Trebuchet MS" , Tahoma , Verdana , Arial;
+	font-family: 'Segoe UI', Trebuchet, "Trebuchet MS", Tahoma, Verdana, Arial;
 	SCROLLING:  none;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 	background-color: #F5F5F5;
 	padding: 0px;
+	min-height: 100vh;
 }
 
 table
@@ -79,6 +106,8 @@ table
 	font-size: 12px;
 	font-family: Verdana, Arial, Tahoma;
 	color: #222222;
+	border-collapse: separate;
+	border-spacing: 2px;
 }
 td
 {
@@ -86,20 +115,22 @@ td
 	font-size: 11px;
 	font-family: Verdana, Arial, Tahoma;
 	color: #222222;
+	padding: 3px 5px;
 }
 
 a {
 	font-family: Verdana, Arial, Tahoma;
-	color: #000088;
+	color: #0066cc;
 	cursor: pointer;
-	text-decoration: underline;
+	text-decoration: none;
 	font-size: 11px;
+	transition: color 0.2s ease;
 }
 a:hover {
 	font-family: Verdana, Arial, Tahoma;
-	color: #000099;
+	color: #ff9900;
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: underline;
 	font-size: 11px;
 }
 a.Bold {
@@ -112,51 +143,68 @@ a.Bold {
 }
 a.Bold:hover {
 	font-family: Verdana, Arial, Tahoma;
-	color: #800000;
+	color: #cc0000;
 	cursor: pointer;
 	font-size: 13px;
 	font-weight: bold;
+	text-decoration: underline;
 }
 a.Button{
 	display: block;
+	background: linear-gradient(to bottom, #ffffff, #f0f0f0);
 	background-color: #FFFFFF;
-	font-family: Tahoma;
+	font-family: 'Segoe UI', Tahoma;
 	font-size: 12px;
 	color: #000000;
-	border: 1px solid #CCCCCC;
+	border: 1px solid #cccccc;
 	width: 100px;
 	height: 20px;
 	text-decoration: none;
 	text-align: center;
 	padding-top: 5px;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	transition: all 0.2s ease;
 }
 a.Button:hover{
 	display: block;
+	background: linear-gradient(to bottom, #fff, #e8e8e8);
 	background-color: #DAE1E8;
-	font-family: Tahoma;
+	font-family: 'Segoe UI', Tahoma;
 	font-size: 12px;
 	color: #000000;
-	border: 1px solid #BDC7D8;
+	border: 1px solid #bbbbbb;
 	width: 100px;
 	height: 20px;
 	text-decoration: none;
 	text-align: center;
 	padding-top: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+	transform: translateY(-1px);
 }
 .SmallBox
 {
 	margin: 2px;
-	padding: 1px;
+	padding: 5px;
 	border: 1px solid #DFDFDF;
 	text-align: center;
 	vertical-align: middle;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 .login {
-	border:1px solid #C0C0C0; font-family: Verdana;
+	border:1px solid #C0C0C0; 
+	font-family: Verdana;
 	font-size: 12px;
+	background: linear-gradient(to bottom, #666666, #555555);
 	background-color: #666666;
 	background-image: url('/images/login.gif');
-	color: #111;
+	color: #fff;
+	padding: 4px 8px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 .login2 {
 	padding: 4px;
@@ -168,23 +216,31 @@ a.Button:hover{
 }
 
 .login:disabled{
-	border:1px solid #C0C0C0; font-family: Verdana;
+	border:1px solid #C0C0C0; 
+	font-family: Verdana;
 	font-size: 12px;
+	background: linear-gradient(to bottom, #888888, #777777);
 	background-color: #666666;
 	background-image: url('/images/login.gif');
-	color: #888888;
+	color: #aaa;
+	cursor: not-allowed;
 }
 .login:hover {
-	border:1px solid #AAAAAA; font-family: Verdana;
+	border:1px solid #AAAAAA; 
+	font-family: Verdana;
 	font-size: 12px;
+	background: linear-gradient(to bottom, #777777, #666666);
 	background-color: #666666;
 	background-image: url('/images/login.gif');
+	transform: translateY(-1px);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .submit {
-	padding: 0px;
-	font-family: Verdana, Arial, Helvetica;
+	padding: 4px 10px;
+	font-family: 'Segoe UI', Verdana, Arial, Helvetica;
 	font-size: 11px;
+	background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
 	background-color: #EEEEEE;
 	border-style: solid;
 	border-width: 1px;
@@ -192,72 +248,109 @@ a.Button:hover{
 	color: #333433;
 	border-spacing: 0px;
 	cursor:pointer;
+	border-radius: 3px;
+	transition: all 0.2s ease;
+}
+.submit:hover {
+	background: linear-gradient(to bottom, #fff, #f0f0f0);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 .submit:disabled{
-	padding: 0px;
+	padding: 4px 10px;
 	font-family: Verdana, Arial, Helvetica;
 	font-size: 11px;
+	background: linear-gradient(to bottom, #dddddd, #cccccc);
 	background-color: #DDDDDD;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #AAAAAA;
 	color: #888888;
 	border-spacing: 0px;
-	cursor:pointer;
+	cursor:not-allowed;
 }
 
 .weapons_box {
-	padding: 1px 1px 1px 1px;
+	padding: 5px;
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
 	font-size: 12px;
+	background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
 	background-color: #F0F0F0;
 	border-style: solid;
 	border-width: 8px 1px 1px 1px;
 	border-color: #AAAAAA;
 	color: #222222;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .lbutton {
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
 	font-size: 11px;
 	color: #000000;
+	background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
 	background-color: #F0F0F0;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #CCCCCC;
 	text-align: center;
+	padding: 3px 8px;
+	border-radius: 3px;
+	transition: all 0.2s ease;
+}
+.lbutton:hover {
+	background: linear-gradient(to bottom, #fff, #f0f0f0);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 .loc {
 	border: 2px solid #CECECE;
 	FONT-SIZE: 11px;
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
 	background-image: url('/images/design/chbg2.gif');
+	background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+	border-radius: 4px;
 }
 
 .but {
-	padding: 2px;
+	padding: 4px 8px;
 	margin: 2px;
 	border-width: 0px;
+	background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
 	background: #EBEBEB;
 	border: #DDDDDD 1px solid;
 	COLOR: #222222;
 	FONT: 12px Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.but:hover {
+	background: linear-gradient(to bottom, #fff, #f0f0f0);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 .but2 {
 	border-color: #CCCCCC;
-	padding: 2px;
+	padding: 4px 8px;
 	margin: 2px;
 	border-width: 0px;
+	background: linear-gradient(to bottom, #e8e8e8, #d8d8d8);
 	background: #D0D0D0;
 	border: #CCCCCC 1px solid;
 	COLOR: #222222;
 	FONT: 12px Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.but2:hover {
+	background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
 .lvl {
 	font-family: Trebuchet,"Trebuchet MS",Tahoma,Arial;
 	font-size: 12px;
 	color: #3366CC;
+	font-weight: bold;
 }
 .user {
 	font-family: Verdana, Arial, Verdana;
@@ -311,7 +404,10 @@ a.Button:hover{
 	font-family: Tahoma, Arial, sans-serif;
 	font-size: 12px;
 	color: #1A4769;
+	background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
 	background-color: #EBEBEB;
+	border-radius: 3px;
+	padding: 3px;
 }
 .fight {
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
@@ -336,11 +432,18 @@ a.Button:hover{
 	border-width: 1px;
 	border-color: #DDDDDD;
 	cursor: pointer;
+	background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
 	background-color: #EEEEEE;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	color: #333333;
-	
+	padding: 4px 8px;
+	border-radius: 3px;
+	transition: all 0.2s ease;
+}
+.combofight:hover {
+	background: linear-gradient(to bottom, #fff, #f0f0f0);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 .fightlong {
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
@@ -351,18 +454,22 @@ a.Button:hover{
 	border-width: 1px;
 	border-color: #CCCCCC;
 	background-repeat: repeat-x;
+	padding: 3px;
+	border-radius: 3px;
 }
 .hp {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
-	color: #990000;
+	color: #cc0000;
 	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
 }
 .ma {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
 	font-weight: bold;
 	color: #0033CC;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
 }
 .mfb {
 	font-family: Tahoma;
@@ -381,27 +488,30 @@ a.Button:hover{
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
 	font-size: 12px;
 	color: #000000;
+	background: linear-gradient(to bottom, #fafafa, #f0f0f0);
 	background-color: #F3F3F3;
 	border-style: solid none solid none;
 	border-width: 1px;
 	border-color: #E0E0E0;
+	padding: 5px;
 }
 .green {
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
 	font-size: 11px;
 	font-weight: bold;
-	color: #005500;
+	color: #008800;
 }
 .blue {
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
 	font-size: 11px;
 	font-weight: bold;
-	color: #000099;
+	color: #0000cc;
 }
 .red {
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
 	font-size: 12px;
-	color: #990000;
+	color: #cc0000;
+	font-weight: bold;
 }
 .gray {
 	font-family: tahoma,verdana,arial,sans-serif,Lucida Sans;
@@ -473,12 +583,14 @@ a.Button:hover{
     -khtml-opacity: 0.85;
     opacity: 0.85;
 	font-family: Verdana, Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	background: linear-gradient(to bottom, #e0e0e0, #d0d0d0);
 	background-color: #CCCCCC;
 	font-size: 11px;
 	background-image: url('/images/design/f_line_long.jpg');
 	border-style: solid;
 	border-width: 1px;
 	border-color: #E1E1E1;
+	border-radius: 3px;
 }
 
 .liner {
@@ -486,23 +598,24 @@ a.Button:hover{
 	border-color: #333333;
 	border-top-style: dashed;
 	border-bottom-style: dashed;
+	margin: 5px 0;
 }
 
 .hp_in_f {
         border-style:  none;
         font-family: Verdana, Arial, Verdana;
         font-size: 11px;
-        color: #990000;
+        color: #cc0000;
         font-weight: bold;
-        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 .ma_in_f {
         border-style:  none;
         font-family: Verdana, Arial, Verdana;
         font-size: 11px;
-        color: #000099;
+        color: #0033cc;
         font-weight: bold;
-        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 /* Улучшенные стили для боевой системы */
 .hp_bar_container {
