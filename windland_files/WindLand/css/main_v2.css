@@ -624,12 +624,13 @@ a.Button:hover{
         transition: left 0.3s ease;
         box-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
+.hp_in_f_small {
 	border-style:  none;
 	font-family: Verdana, Arial, Verdana;
 	font-size: 10px;
 	color: #990000;
 }
-.ma_in_f {
+.ma_in_f_small {
 	border-style:  none;
 	font-family: Verdana, Arial, Verdana;
 	font-size: 10px;
