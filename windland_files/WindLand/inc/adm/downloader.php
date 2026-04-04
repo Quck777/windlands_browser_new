@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 if (UID!=1 and UID!=2509) die('Go..');
 
 DEFINE ('LOAD_DIR', $_SERVER['DOCUMENT_ROOT'].'/images');

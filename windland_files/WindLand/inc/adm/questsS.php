@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php 
-
 include "quests.php";
 
 echo "<br><hr><br><b class=about>–ечЄвки</b>";

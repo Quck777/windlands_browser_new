@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 include_once (ROOT.'/inc/quest/quests.php');
 $t1 = $db->sqla("SELECT * FROM quest WHERE id = ".TOUR3."");
 if(empty($http->get["show_t3"]) and !$t1["finished"]) // Турнир 1 15-99 10x10

@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 	// Дуплируем перса
 	$perstemp = $player->pers;
 	$player->pers = $persvs;

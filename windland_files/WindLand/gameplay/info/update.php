@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 if (defined('PINFO')==false) exit;
 
 include_once(ROOT.'/inc/inc/auras.php');

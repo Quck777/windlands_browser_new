@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 if ($rk[52]==0 and $status!='wg') exit('Доступ запрещен');
 
 	function generate_sostav($us)

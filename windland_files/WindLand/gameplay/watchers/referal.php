@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 if ($p25<>1) exit;
 
 	echo "<a class=timef href=info.php?id=".$player->pers["uid"]."&do_w=referal&sort=lvl>Выше 0-го уровня</a> | 

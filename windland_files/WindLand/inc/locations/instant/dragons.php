@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 // ALTER TABLE `users` ADD `instant` VARCHAR( 20 ) NOT NULL DEFAULT 'none'
 
 

@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 if (!file_exists(SERVICE_ROOT."/events/A".date("d-m-y").".txt"))
 {
 $res = $db->sql("SELECT *

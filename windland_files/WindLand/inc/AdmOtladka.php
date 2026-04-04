@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 $tmescript = round(microtime(true)-GLOBAL_START_TIME, 5);
 
 if ( isset($_GET['adm_clear']) )

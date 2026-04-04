@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 define('WIDTH', 4);
 define('HEIGHT', 2);
 define('MTIME', tme());

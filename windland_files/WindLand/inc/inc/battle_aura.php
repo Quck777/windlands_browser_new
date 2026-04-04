@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 if ($player->pers["user"] == 'lastdays')
 {
 	if ($player->pers["invisible"]>tme()){$player->pers["user"] = '<i>невидимка</i>';$invyou=1;$player->pers["pol"]='female';} else $invyou=0;

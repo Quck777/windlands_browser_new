@@ -1,12 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
-
 	if (@$http->get["delete_making"] and substr_count("|".$player->pers["making"]."|",$http->get["delete_making"]."|"))
 
 		{

@@ -1,10 +1,5 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<script>
 var MAINID;
 function w_buy(id)
 {

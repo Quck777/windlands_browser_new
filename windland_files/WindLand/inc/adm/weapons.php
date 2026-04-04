@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 include("inc/balance.php");
 
 if ($priv["ewp"]==2)

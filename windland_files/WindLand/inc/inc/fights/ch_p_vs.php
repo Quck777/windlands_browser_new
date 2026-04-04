@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 $player->pers["chp"] = floor($player->pers["chp"]);
 $player->pers["cma"] = floor($player->pers["cma"]);
 

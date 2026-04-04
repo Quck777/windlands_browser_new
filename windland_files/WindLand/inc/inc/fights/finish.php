@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 $t = tme();
 
 $waiter = '';
@@ -207,7 +201,7 @@ if ($fight["type"]=='notf' or $fight["type"]=='')
 				if($c2b>2) $c2b = 2;
 			}
 			# Адский код даниеля.. не забыть переписать
-			$inst_type = mysql_result(mysql_query("SELECT instant FROM users WHERE uid=".$tmp["uid"].""),0,'instant');
+			$inst_type = mysql_result($db->sql("SELECT instant FROM users WHERE uid=".$tmp["uid"].""),0,'instant');
 			if ($tmp["location"]=='inst_prefight'):
 				if ($inst_type=='alive'):
 				$instant = 3;

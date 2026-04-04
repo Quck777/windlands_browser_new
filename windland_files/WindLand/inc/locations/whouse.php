@@ -1,12 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
-
 if (isset($http->get['act']))
 {
   $act = $http->get['act'];

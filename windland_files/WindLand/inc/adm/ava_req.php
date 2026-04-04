@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 if ($priv['level']!=0 and $priv['level']<=3)
 {
 	if(@$_GET["deny"])

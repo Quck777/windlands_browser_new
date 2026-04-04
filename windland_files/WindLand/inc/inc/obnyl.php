@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 if (@$http->get["gopers"]=="obnyl" and ($player->pers["zeroing"]>0 or $player->pers["action"]==-10)) 
 {
 	$db->sql("UPDATE p_auras SET esttime=0, turn_esttime=0 WHERE `uid`='".$player->pers["uid"]."'");

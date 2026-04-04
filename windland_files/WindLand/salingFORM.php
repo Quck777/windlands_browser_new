@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 //	define('MICROLOAD', true);
 	// Загружаем файл конфига, ВАЖНЫЙ.
 	include ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');

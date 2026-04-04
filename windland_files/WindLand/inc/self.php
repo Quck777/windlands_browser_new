@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 	function send_mail($to, $body, $title=false)
 	{
 		$email = 'robot@'.HOST;

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 
 # preparing PNG fonts to use with KCAPTCHA.
 # reads files from folder "../fonts0", scans for symbols ans spaces and writes new font file with cached symbols positions to filder "../fonts"

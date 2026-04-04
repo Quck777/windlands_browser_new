@@ -1,26 +1,19 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 function zodiak($month, $day)
 {
 	$r = '';
-	if (($day>20 and $month==03) or ($day<21 and $month==04) )		$r = 'Овен';
-	elseif (($day>20 and $month==04) or ($day<21 and $month==05))	$r = 'Телец';
-	elseif (($day>20 and $month==05) or ($day<22 and $month==06))	$r = 'Близнецы';
-	elseif (($day>21 and $month==06) or ($day<23 and $month==07))	$r = 'Рак';
-	elseif (($day>22 and $month==07) or ($day<24 and $month==08))	$r = 'Лев';
-	elseif (($day>23 and $month==08) or ($day<24 and $month==09))	$r = 'Дева';
-	elseif (($day>23 and $month==09) or ($day<24 and $month==10))	$r = 'Весы';
+	if (($day>20 and $month==3) or ($day<21 and $month==4) )		$r = 'Овен';
+	elseif (($day>20 and $month==4) or ($day<21 and $month==5))	$r = 'Телец';
+	elseif (($day>20 and $month==5) or ($day<22 and $month==6))	$r = 'Близнецы';
+	elseif (($day>21 and $month==6) or ($day<23 and $month==7))	$r = 'Рак';
+	elseif (($day>22 and $month==7) or ($day<24 and $month==8))	$r = 'Лев';
+	elseif (($day>23 and $month==8) or ($day<24 and $month==9))	$r = 'Дева';
+	elseif (($day>23 and $month==9) or ($day<24 and $month==10))	$r = 'Весы';
 	elseif (($day>23 and $month==10) or ($day<23 and $month==11))	$r = 'Скорпион';
 	elseif (($day>22 and $month==11) or ($day<22 and $month==12))	$r = 'Стрелец';
-	elseif (($day>21 and $month==12) or ($day<21 and $month==01))	$r = 'Козерог';
-	elseif (($day>20 and $month==01) or ($day<21 and $month==02))	$r = 'Водолей';
-	elseif (($day>20 and $month==02) or ($day<21 and $month==03))	$r = 'Рыбы';
+	elseif (($day>21 and $month==12) or ($day<21 and $month==1))	$r = 'Козерог';
+	elseif (($day>20 and $month==1) or ($day<21 and $month==2))	$r = 'Водолей';
+	elseif (($day>20 and $month==2) or ($day<21 and $month==3))	$r = 'Рыбы';
 	return $r;
 }
 

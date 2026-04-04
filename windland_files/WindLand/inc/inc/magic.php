@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 $req["magic_koef"] = mtrunc(floor($req["magic_koef"]));
 if ($req["magic_koef"]<1) $req["magic_koef"]=1;
 if ($req["magic_koef"]>($_pers["level"]/2+1)) $req["magic_koef"] = 1;

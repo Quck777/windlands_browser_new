@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 	if ( $http->_post("comment") ) $http->post["comment"] = str_replace(":",";",$http->post["comment"]);
 	#ADD apps duel::
 	if (@$http->post["travm"] and $cat==1 and !$player->pers["apps_id"])

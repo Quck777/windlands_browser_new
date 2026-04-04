@@ -149,7 +149,7 @@ function mysql_fetch_array($result, $type = MYSQL_BOTH) {
     return false;
 }
 
-function mysql_query($query, $link_identifier = null) {
+function $db->sql($query, $link_identifier = null) {
     global $db;
     if ( isset($db) && $db instanceof MySQL ) {
         return $db->sql($query);

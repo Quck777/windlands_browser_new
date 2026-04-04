@@ -33,10 +33,10 @@
 		<td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-style: solid; border-top-width: 1px; border-bottom-width: 1px"><script>
 <?
 if (empty($_GET["cat"]) or $_GET["cat"]==1)
-$res = mysql_query("SELECT user,level,victories,losses,sign,exp,money,rank,uid FROM `users` WHERE `sign`<>'sl' ORDER BY (level*1000+exp/(victories+losses+1)+exp*(victories-losses)+money-uid*20 + rank*exp) DESC LIMIT 0 , 100");
+$res = $db->sql("SELECT user,level,victories,losses,sign,exp,money,rank,uid FROM `users` WHERE `sign`<>'sl' ORDER BY (level*1000+exp/(victories+losses+1)+exp*(victories-losses)+money-uid*20 + rank*exp) DESC LIMIT 0 , 100");
 
 if ($_GET["cat"]==3)
-$res = mysql_query("SELECT user,level,kb,udmax,id FROM `bots` ORDER BY (level*1000+kb*500+udmax+900) DESC LIMIT 0 , 30");
+$res = $db->sql("SELECT user,level,kb,udmax,id FROM `bots` ORDER BY (level*1000+kb*500+udmax+900) DESC LIMIT 0 , 30");
 
 
 
@@ -167,7 +167,7 @@ if ($_GET["cat"]==2)
 if ($_GET["cat"]==4) 
  {
 echo '<div align=center> <table width="600" id="table1" border=0 cellspacing=0 cellpadding=2>';
-$res = mysql_query("SELECT user,level,referal_counter,sign FROM `users` WHERE `sign`<>'sl' ORDER BY (referal_counter) DESC LIMIT 0 , 50");
+$res = $db->sql("SELECT user,level,referal_counter,sign FROM `users` WHERE `sign`<>'sl' ORDER BY (referal_counter) DESC LIMIT 0 , 50");
 $p=1;
 while($row=mysql_fetch_array($res))
 {
@@ -186,7 +186,7 @@ if ($_GET["cat"]==5)
  {
 echo '<div align=center> <table width="600" id="table1" border=0 cellspacing=0 cellpadding=2>';
 //error_reporting(E_ALL);
-$res = mysql_query("SELECT * FROM `clans` ORDER BY `clans`.`dmoney` DESC LIMIT 0 , 30");
+$res = $db->sql("SELECT * FROM `clans` ORDER BY `clans`.`dmoney` DESC LIMIT 0 , 30");
 $p=1;
 while($row=mysql_fetch_array($res))
 {

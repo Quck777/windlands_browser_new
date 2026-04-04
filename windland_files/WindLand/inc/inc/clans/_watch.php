@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 if ( defined('CLANS')==false or $player->pers['sign']!='watchers' ) {echo '<center>Ошибка.</center>'; exit;}
 
 if (isset($clan)) $c=1;

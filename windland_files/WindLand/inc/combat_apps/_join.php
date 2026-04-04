@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 	if ($cat==1 and intval($http->_get("id")) <0 )
 	{
 		if ($player->pers["level"]<20)

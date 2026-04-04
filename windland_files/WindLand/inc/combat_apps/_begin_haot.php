@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 	$db->sql("DELETE FROM app_for_fight WHERE id=".$app["id"]."", __FILE__,__LINE__,__FUNCTION__,__CLASS__);
 	$db->sql("UPDATE users SET apps_id=0,fteam=0,refr=1 WHERE apps_id=".$app["id"]."", __FILE__,__LINE__,__FUNCTION__,__CLASS__);
 	$us1 = Array();

@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 // Загружаем файл конфига, ВАЖНЫЙ.
 include ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');
 // Подключаемся к SQL базе
@@ -44,9 +38,10 @@ function remove_weapon_orden($v,$uid)
 /*UPDATE `wp` SET `type`='gavno',`tlevel`=50,`id_in_w`='000' WHERE `id_in_w`='' and `dprice`>0*/
 
 if ($http->get["test"] == 1) {
-$items = mysql_query("SELECT * FROM `wp` WHERE `id_in_w`='' and `dprice`>0 and `uidp`=731");
+$items = $db->sql("SELECT * FROM `wp` WHERE `id_in_w`='' and `dprice`>0 and `uidp`=731");
 $kk = 0;
-while ($i = mysql_fetch_array($items)){    $kk++;
+while ($i = mysql_fetch_array($items)){
+    $kk++;
     ## Вещь существует, вещь одета, персонаж не в бою. Персонаж оффлайн.
 	remove_weapon_orden ($i["id"],$i["uidp"]);
 }

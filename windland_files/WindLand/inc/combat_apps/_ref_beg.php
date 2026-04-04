@@ -1,11 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 if ($yapp["atime"]<=time() and $yapp["type"]==1)
 {
 	$player->pers["apps_id"] = 0;

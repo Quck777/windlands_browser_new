@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 $lb = sqla("SELECT b_frequency FROM configs");
 if (($pers["lb_attack"]+2*$lb["b_frequency"])<tme() and $pers["cfight"]==0 and $pers["apps_id"]==0 and $pers["curstate"]<5)
 {

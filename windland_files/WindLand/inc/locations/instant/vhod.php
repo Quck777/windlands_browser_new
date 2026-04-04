@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 // ALTER TABLE `users` ADD `last_instant` INT( 11 ) UNSIGNED NOT NULL DEFAULT '0'
 // INSERT INTO `locations` (`id`, `name`, `inc`, `go_id`) VALUES ('inst_turnir', 'Подземелье', 'instant/turnir.php', '');
 // ALTER TABLE `users` ADD `etap_instant` TINYINT( 2 ) UNSIGNED NOT NULL DEFAULT '0'

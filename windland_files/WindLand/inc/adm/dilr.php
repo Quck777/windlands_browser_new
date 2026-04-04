@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 if ( $player->pers['uid']==1 or $player->pers['uid']==7); else exit;
 
 if ( isset($http->get['go_out']) ) 

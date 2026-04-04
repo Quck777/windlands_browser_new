@@ -4,7 +4,6 @@
 #### WindLand RPG v2.0 ######
 ##############################
 
-<?
 $sql_queries_counter=0;
 $sql_queries_timer=0;
 $sql_longest_query_t=0;
@@ -108,7 +107,7 @@ function sql($q)
 {
 	GLOBAL $sql_queries_counter,$sql_queries_timer,$sql_longest_query_t,$sql_longest_query,$sql_all,$_ECHO_OFF;
 	$t = time()+round(microtime(),3);
-	$r = mysql_query($q);
+	$r = $db->sql($q);
 	$t = time()+round(microtime(),3) - $t;
 	//if($t>0.2)
 	//	say_to_chat ("a",'['.str_replace("'","",$q).'] ֲנולÿ נאבמעû: '.$t.'',1,'sL','*');
@@ -116,8 +115,8 @@ function sql($q)
 	if ($error and $_COOKIE["uid"]==5 and !$_ECHO_OFF)echo "<font class=hp><b> ־״ֱָÊְ MySQL!!! : ".$error." <i>[".$q."]</i></b></font>";
 	/*elseif ($error)
 	 {
-		$sql_errors = mysql_fetch_array(mysql_query("SELECT sql_errors FROM configs"));
-		if (!substr_count($sql_errors[0],"<".$error." [".$q."]>")) mysql_query("UPDATE configs SET sql_errors='".$sql_errors[0]."<".addslashes($error)." [".addslashes($q)."]>"."'");
+		$sql_errors = mysql_fetch_array($db->sql("SELECT sql_errors FROM configs"));
+		if (!substr_count($sql_errors[0],"<".$error." [".$q."]>")) $db->sql("UPDATE configs SET sql_errors='".$sql_errors[0]."<".addslashes($error)." [".addslashes($q)."]>"."'");
 	 }*/
 	$sql_queries_counter++;
 	$sql_queries_timer+=abs($t);

@@ -1,10 +1,4 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
 if ( defined('CLANS')==false ) {echo '<center>Ошибка.</center>'; exit;}
 $player->pers['sign'] = $clan['sign'];
 

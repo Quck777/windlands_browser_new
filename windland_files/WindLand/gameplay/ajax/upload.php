@@ -1,17 +1,9 @@
 <?php
-##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
-
 Error_Reporting(0);
 require ($_SERVER['DOCUMENT_ROOT'].'/configs/config.php');
 include (ROOT.'/inc/functions.php');
-$res = mysql_connect (SQL_HOST,SQL_USER,SQL_PASS);
-mysql_select_db(SQL_BASE, $res);
-mysql_query('SET NAMES cp1251');
+$db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE);
+$db->sql('SET NAMES cp1251');
 
 	$you = catch_user(intval($_COOKIE['uid']),$_COOKIE["hashcode"],1);
 	if ( $you['priveleged']==0 and $_GET['service']==false )
