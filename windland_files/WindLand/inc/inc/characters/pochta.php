@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 echo"
 <table width=100% cellspacing=0 cellpadding=3 border=0>
 <td align=center valign=top>
@@ -13,9 +9,9 @@ echo"
 </table>";
 
 
-$unread = mysql_query("SELECT * FROM `pochta` WHERE `whom` LIKE '".$pers[user]."' AND `read` = 0 " );
-$poch = mysql_query("select * from pochta where whom='".$pers[user]."' ORDER by ID DESC");
-$send = mysql_query("select * from pochta where user='".$pers[user]."' ORDER by ID DESC");
+$unread = $db->sql("SELECT * FROM `pochta` WHERE `whom` LIKE '".$pers[user]."' AND `read` = 0 " );
+$poch = $db->sql("select * from pochta where whom='".$pers[user]."' ORDER by ID DESC");
+$send = $db->sql("select * from pochta where user='".$pers[user]."' ORDER by ID DESC");
 
 echo"<body bgcolor=#EBEDEC leftmargin=0 topmargin=0>";
 
@@ -53,7 +49,7 @@ if ($act=="read") {
 }
 $mny=$pers["user"];
 if ($act=="let") {
-	$pochas = mysql_query("select * from pochta where id='$id' ORDER by ID DESC");
+	$pochas = $db->sql("select * from pochta where id='$id' ORDER by ID DESC");
 	$let = mysql_fetch_array($pochas);
 	$text=$let["text"];
 	$subj=$let["subject"];
@@ -64,7 +60,7 @@ if ($act=="let") {
 		<b>Тема:</b> $subj<br>
 		<b>Текст:</b><br>$text";
 	if ($mny=="$who") {
-	mysql_query("UPDATE `pochta` SET `read` = '1' WHERE `id` = '$id' ");
+	$db->sql("UPDATE `pochta` SET `read` = '1' WHERE `id` = '$id' ");
 	}
 }
 
@@ -117,12 +113,12 @@ if ($do=="3") {
 	else {
 		$kolvo=3; //Цена отправки почты
 		$sql ="INSERT INTO pochta(user,whom,text,subject) VALUES ('".$pers[user]."','$target','$text','$subj')";
-		$result = mysql_query($sql);
+		$result = $db->sql($sql);
 
 
 		$cr=$pers[money]-$kolvo;
-		mysql_query("UPDATE `users` SET `money` = '$cr' WHERE `uid`='".$_SESSION["uid"]."';");
-	            $infs = mysql_query("select * from users where user='$target'");
+		$db->sql("UPDATE `users` SET `money` = '$cr' WHERE `uid`='".$_SESSION["uid"]."';");
+	            $infs = $db->sql("select * from users where user='$target'");
 	            $info = mysql_fetch_array($infs);
 
 

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 $bot=mysql_fetch_array (sql("SELECT * FROM `bots` WHERE `id`='".$p[1]."'"));
 $bot["chp"] = $p[2];
 $bot["cma"] = $p[3];

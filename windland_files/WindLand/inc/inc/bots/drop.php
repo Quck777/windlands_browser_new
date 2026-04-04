@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 
 if (!$_persvs["id"]) $_persvs  =  $persvs;
 

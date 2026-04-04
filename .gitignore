@@ -4,36 +4,36 @@
 __pycache__/
 *.o
 *.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+.env
+.env.local
+.env.*
+
+# Logs and temp files
 *.log
 *.tmp
 *.swp
-
-# Dependencies
-vendor/
-node_modules/
-
-# Environment
-.env
-.env.local
-*.env.*
+*.swo
 
 # Editors
 .vscode/
 .idea/
 
-# Backup and dump files
-*backup*/
-*.bak
-*.orig
-*.save
-.sql_dump.php
-dumper.cfg.php
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-# Session and cache files
-*.sess
-*.cache
-
-# OS generated files
+# System files
 .DS_Store
 Thumbs.db
 ```

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 	if (@$_POST["friend_nick"])
 	{
 		$p = sqla("SELECT uid,user FROM users WHERE user='".$_POST["friend_nick"]."'");

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 
 if ($player->pers["invisible"]>tme()) {$_INV = 1;$player->pers["cfight"]=0;$player->pers["online"]=0;} else $_INV = 0;
 if ($player->pers["online"]==1) 

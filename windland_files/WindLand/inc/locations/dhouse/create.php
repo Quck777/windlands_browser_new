@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 
 if ($http->post["add_image"] == 1 and $player->pers["dmoney"]>=10)
 {

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 //—даЄм вещь в лавку
 ###############
 if (isset($http->get["lavkasdat"]) and $player->pers["punishment"]<$time and strpos(" ".$player->pers["location"],"lavka"))

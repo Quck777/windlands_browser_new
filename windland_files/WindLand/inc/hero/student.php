@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 if($http->_post('pupil'))
 {
 	$pname = $http->_post('pupil');

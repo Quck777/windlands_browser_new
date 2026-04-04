@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 
 if ( !$db->sqlr("SELECT COUNT(*) FROM chars WHERE uid='".UID."'") )
 {

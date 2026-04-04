@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php // style="text-align: center;"
+php // style="text-align: center;"
 if ( defined('CLANS')==false ) {echo '<center>Ошибка.</center>'; exit;}
 
 $glava = ($status == 'a' or $status == 'wg') ? true : false;

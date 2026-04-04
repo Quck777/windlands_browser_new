@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 
 $count_alc = (int)$db->sqlr('SELECT COUNT(*) FROM `p_alcohol` WHERE `uid`='.UID.' and `esttime`>'.tme().';', 0, __FILE__,__LINE__,__FUNCTION__,__CLASS__);
 

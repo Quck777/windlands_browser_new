@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 	if (@$_POST and $priv["ewp"]==2)
 	{	
 		$params = explode("@",$_POST["params"]);

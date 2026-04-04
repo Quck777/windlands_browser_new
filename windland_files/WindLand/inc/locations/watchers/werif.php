@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 if ($rk[51]==0 and $status!='wg') exit('Доступ запрещен.');
 
 $pd = $db->sqlr('SELECT `id` FROM `watch_req_werif` WHERE `whoid`='.UID.' and `date_closed`=0;');

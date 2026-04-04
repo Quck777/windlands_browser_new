@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 
 define('HERBAL_CHANGE', 3600); // 18200
 define('HERBAL_GROW', 1800); // 8600

@@ -1,10 +1,6 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
-
-<?php
+php
 $stm = microtime(true);
 
 if ( !$player->getClan() ) {echo '<center>Вы не состоите в клане.</center>'; exit;}

@@ -1,16 +1,12 @@
 <?php
 ##############################
-#### Global Update 2026 #####
-#### WindLand RPG v2.0 ######
-##############################
 
-<?
 error_reporting(0);
 session_start();
 $now=time();
 include("configs/config.php");
-$res = mysql_connect(SQL_HOST,SQL_USER,SQL_PASS); mysql_select_db(SQL_BASE, $res); mysql_query("/*!40101 SET NAMES 'cp1251' */") or die("Error: " . mysql_error());
-mysql_query("SET NAMES cp1251");
+$db = new MySQL(SQL_USER, SQL_PASS, SQL_BASE); // Подключение с кодировкой cp1251
+$db->sql("SET NAMES cp1251");
 
 
 //print "проверка прошла!!!!!";
@@ -155,16 +151,16 @@ echo'Мерит,Добрая девушка которой нужны Камни, которые она потеряла на берегу Оз
  /////// КВСЕТ №3 Мерит
 //////////////////////////////////
 if ($pers['kamen'] >= 30 && $pers['qwest'] == 9  ) {
-mysql_query("UPDATE `users` set `qwest`='10' where `user` = '".$pers['user']."'");
-mysql_query("UPDATE `users` set `kamen`= `kamen`-'30' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `qwest`='10' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `kamen`= `kamen`-'30' where `user` = '".$pers['user']."'");
  echo"<script>location='main.php?goloc=jrec'</script>";
 }
 
 
 if ($act=="3_0") {
-mysql_query("UPDATE `users` set `qwest`='9' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `qwest`='9' where `user` = '".$pers['user']."'");
 // Работаем с чатом
-mysql_query("
+$db->sql("
 INSERT INTO
 chat
 SET
@@ -183,11 +179,11 @@ color = '333333'");
 
 ////////////////////////////////////
 if ($act=="3_2") {
-mysql_query("UPDATE `users` set `money`=`money`+'500', `exp`=`exp`+'3500' where `user` = '".$pers['user']."'");
-mysql_query("UPDATE `users` set `qwest`='11' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `money`=`money`+'500', `exp`=`exp`+'3500' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `qwest`='11' where `user` = '".$pers['user']."'");
 	$v = sqla("SELECT id,name FROM weapons WHERE id='14564'");
 		$id = insert_wp($v["id"],$pers["uid"]);
- mysql_query("
+ $db->sql("
 INSERT INTO
 chat
 SET
@@ -207,16 +203,16 @@ color = '333333'");
  /////// КВСЕТ Сердца Воинов Сетха Мерит
 //////////////////////////////////
 if ($pers['heart'] >= 20 && $pers['qwest2'] == 1  ) {
-mysql_query("UPDATE `users` set `qwest2`='2' where `user` = '".$pers['user']."'");
-mysql_query("UPDATE `users` set `heart`= `heart`-'20' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `qwest2`='2' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `heart`= `heart`-'20' where `user` = '".$pers['user']."'");
  echo"<script>location='main.php?goloc=jrec'</script>";
 }
 
 
 if ($act=="4_0") {
-mysql_query("UPDATE `users` set `qwest2`='1' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `qwest2`='1' where `user` = '".$pers['user']."'");
 // Работаем с чатом
-mysql_query("
+$db->sql("
 INSERT INTO
 chat
 SET
@@ -235,14 +231,14 @@ color = '333333'");
 
 ////////////////////////////////////
 if ($act=="4_2") {
-mysql_query("UPDATE `users` set `money`=`money`+'500', `exp`=`exp`+'3500' where `user` = '".$pers['user']."'");
-mysql_query("UPDATE `users` set `qwest2`='0' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `money`=`money`+'500', `exp`=`exp`+'3500' where `user` = '".$pers['user']."'");
+$db->sql("UPDATE `users` set `qwest2`='0' where `user` = '".$pers['user']."'");
 	 $v = sqla ("SELECT name,id FROM `weapons` WHERE `id`='15286'");
 	$id = insert_wp($v["id"],$pers["uid"],$pers["user"]);
 	sql("UPDATE wp SET timeout=".(time()+3600*72)." WHERE id=".$id);
 
 
- mysql_query("
+ $db->sql("
 INSERT INTO
 chat
 SET
